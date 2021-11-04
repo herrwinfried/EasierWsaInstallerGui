@@ -4,10 +4,10 @@ $apiUrl = "https://store.rg-adguard.net/api/GetFiles"
 
 $productUrl = "https://www.microsoft.com/store/productId/9P3395VX91NR" # To Do
 
-#$downloadFolder = Join-Path $env:TEMP "StoreDownloads"
-#if(!(Test-Path $downloadFolder -PathType Container)) {
-#    New-Item $downloadFolder -ItemType Directory -Force
-#}
+$downloadFolder = Join-Path $env:TEMP "StoreDownloads"
+if(!(Test-Path $downloadFolder -PathType Container)) {
+    New-Item $downloadFolder -ItemType Directory -Force
+}
 
 mkdir 'C:\wsaproject'
 
@@ -28,7 +28,7 @@ $raw | Select-String '<tr style.*<a href=\"(?<url>.*)"\s.*>(?<text>.*)<\/a>' -Al
 
     if($text -match "_(neutral).*msixbundle$") {
         Write-Host $text $url
-       # $downloadFile = Join-Path $downloadFolder $text
+       $downloadFile = Join-Path $downloadFolder $text
         Invoke-WebRequest -Uri $url -OutFile "C:\wsaproject\$text"
         pause
     }
