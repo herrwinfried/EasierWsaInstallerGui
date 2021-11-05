@@ -6,97 +6,44 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>888</width>
-    <height>376</height>
+    <width>1108</width>
+    <height>428</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>WSA Installer[BETA]</string>
+   <string>WSA Installed GUI[BETA]</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>:images/52379312.png</normaloff>:images/52379312.png</iconset>
+   <iconset resource="image.qrc">
+    <normaloff>:/images/52379312.png</normaloff>:/images/52379312.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="gridLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>10</y>
-      <width>321</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="5" column="0">
-      <widget class="QRadioButton" name="notwsa">
-       <property name="text">
-        <string>I Don't Install WSA, None</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QRadioButton" name="opensuse">
-       <property name="text">
-        <string>OpenSUSE Tumbleweed</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>Which operating system will you install WSA with?</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QRadioButton" name="ubuntu">
-       <property name="text">
-        <string>Ubuntu</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>150</y>
-      <width>471</width>
-      <height>128</height>
+      <x>730</x>
+      <y>10</y>
+      <width>361</width>
+      <height>121</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="label">
        <property name="text">
-        <string>Requirements</string>
+        <string>Require</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="virtualmachineplatform">
-       <property name="maximumSize">
-        <size>
-         <width>211</width>
-         <height>22</height>
-        </size>
-       </property>
+      <widget class="QCheckBox" name="vmp">
        <property name="text">
-        <string>Turn on Virtual Machine Platform</string>
+        <string>Activate Virtual Machine Platform</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Optional</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="downloadwsa">
+      <widget class="QCheckBox" name="checkBox">
        <property name="enabled">
         <bool>false</bool>
        </property>
@@ -106,7 +53,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="downloadogapps">
+      <widget class="QCheckBox" name="checkBox_2">
        <property name="enabled">
         <bool>false</bool>
        </property>
@@ -117,161 +64,165 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="verticalLayoutWidget_3">
+   <widget class="QWidget" name="verticalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>270</y>
-      <width>321</width>
-      <height>51</height>
+      <x>730</x>
+      <y>160</y>
+      <width>449</width>
+      <height>111</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Optional</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="adb">
+       <property name="text">
+        <string>Download and install Android Platform Tools + adds path</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>701</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Which OS would you prefer for WSA?</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="ubuntu">
+       <property name="text">
+        <string>Ubuntu</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="opensuse">
+       <property name="text">
+        <string>OpenSUSE Tumbleweed</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="nowsa">
+       <property name="text">
+        <string>None</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>697</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Powershell security mode</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="powershelllowanddefault">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>To run powershell, lower the security level and set it to the default permission level after the processes are finished.</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="powershelllow">
+       <property name="text">
+        <string>Lower the security level to run powershell.</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="nops">
+       <property name="text">
+        <string>None</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>320</y>
+      <width>1081</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
       <widget class="QProgressBar" name="progressBar">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="value">
         <number>24</number>
        </property>
       </widget>
      </item>
-    </layout>
-   </widget>
-   <widget class="QDialogButtonBox" name="buttonBox">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>310</y>
-      <width>171</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="standardButtons">
-     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-    </property>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget_4">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>10</y>
-      <width>471</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_4">
      <item>
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Security level for Powershell</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="powershellmode">
-       <property name="text">
-        <string>To run powershell lower the security level </string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="powershellmodeend">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="text">
-        <string>To run powershell lower the security level and then make it the default level</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="notpowershelllevel">
-       <property name="text">
-        <string>don't touch anything</string>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
        </property>
       </widget>
      </item>
     </layout>
-   </widget>
-   <widget class="QCheckBox" name="adb">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>180</y>
-      <width>282</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Android Platform Tools Download and install</string>
-    </property>
    </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>41</x>
-      <y>151</y>
-      <width>35</width>
-      <height>16</height>
+      <x>20</x>
+      <y>270</y>
+      <width>361</width>
+      <height>78</height>
      </rect>
     </property>
     <property name="text">
-     <string>Extras</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>330</y>
-      <width>211</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>https://github.com/herrwinfried</string>
+     <string>https://github.com/HerrWinfried</string>
     </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionx">
-   <property name="text">
-    <string>x</string>
-   </property>
-  </action>
-  <action name="actionTest">
-   <property name="text">
-    <string>Test</string>
-   </property>
-  </action>
-  <action name="actiontest">
-   <property name="text">
-    <string>test</string>
-   </property>
-  </action>
-  <action name="actionWindows_Subsystem_for_Android">
-   <property name="checkable">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>Windows Subsystem for Android</string>
-   </property>
-  </action>
-  <action name="actionAndroid_Platform_Tools">
-   <property name="text">
-    <string>Android Platform Tools</string>
-   </property>
-  </action>
-  <action name="actionUbuntu_WSL">
-   <property name="text">
-    <string>Ubuntu WSL</string>
-   </property>
-  </action>
-  <action name="actionOpenSUSE_WSL">
-   <property name="text">
-    <string>OpenSUSE WSL</string>
-   </property>
-  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>

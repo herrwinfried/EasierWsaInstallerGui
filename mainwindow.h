@@ -16,24 +16,19 @@ public:
     ~MainWindow();
 
 private slots:
-
-    void on_buttonBox_accepted();
-
     void on_buttonBox_rejected();
 
     void on_ubuntu_clicked(bool checked);
 
     void on_opensuse_clicked(bool checked);
 
-    void on_notwsa_clicked(bool checked);
+    void on_nowsa_clicked(bool checked);
 
-    void on_powershellmodeend_clicked(bool checked);
+    void on_vmp_clicked(bool checked);
 
-    void on_powershellmode_clicked(bool checked);
+    void on_nops_clicked(bool checked);
 
-    void on_notpowershelllevel_clicked(bool checked);
-
-
+    void on_buttonBox_accepted();
 
 private:
     Ui::MainWindow *ui;
