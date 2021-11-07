@@ -44,10 +44,11 @@ private slots:
 
     void on_msopensusetw_pressed();
 
-
     void on_wsadownloadpage_pressed();
 
     void on_gappsdownloadpage_pressed();
+
+    void on_msdownloadpw_pressed();
 
 private:
     Ui::MainWindow *ui;

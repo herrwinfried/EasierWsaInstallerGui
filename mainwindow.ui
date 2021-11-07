@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1108</width>
-    <height>428</height>
+    <height>465</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -69,7 +69,7 @@
      <rect>
       <x>730</x>
       <y>160</y>
-      <width>449</width>
+      <width>451</width>
       <height>111</height>
      </rect>
     </property>
@@ -84,7 +84,8 @@
      <item>
       <widget class="QCheckBox" name="adb">
        <property name="text">
-        <string>Download and install Android Platform Tools + adds path</string>
+        <string>Download and install Android Platform Tools + adds path 
+(adb command)</string>
        </property>
       </widget>
      </item>
@@ -176,26 +177,13 @@
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>359</y>
-      <width>1081</width>
-      <height>31</height>
+      <x>760</x>
+      <y>390</y>
+      <width>341</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QProgressBar" name="progressBar">
-       <property name="toolTip">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="value">
-        <number>24</number>
-       </property>
-      </widget>
-     </item>
      <item>
       <widget class="QDialogButtonBox" name="buttonBox">
        <property name="standardButtons">
@@ -209,9 +197,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>270</y>
+      <y>279</y>
       <width>1081</width>
-      <height>80</height>
+      <height>91</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
@@ -243,17 +231,20 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="3">
-      <widget class="QPushButton" name="gappsdownloadpage">
+     <item row="1" column="1">
+      <widget class="QPushButton" name="msdownloadpw">
        <property name="text">
-        <string>OpenGapps Download Page</string>
+        <string>MS Store for Powershell 7+</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="2">
-      <widget class="QPushButton" name="wsadownloadpage">
+     <item row="1" column="0">
+      <widget class="QPushButton" name="donatebutton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="text">
-        <string>WSA Download Page</string>
+        <string>Donate</string>
        </property>
       </widget>
      </item>
