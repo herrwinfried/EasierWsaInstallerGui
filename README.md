@@ -1,8 +1,13 @@
 #
 
 This project is a GUI ported and simplified version of [WSA-Script](https://github.com/herrwinfried/wsa-script).
+## Important Information
+**You need to delete the pre-installed WSA. You cannot get updates from Microsoft Store after installing WSA.**
 
-> The ARM version is still experimental, please give feedback when you encounter an error.
+> The ARM version is still beta, please give feedback when you encounter an error.
+
+## Information
+if you want to handle things with terminal. [Click here](https://github.com/herrwinfried/wsa-scriptg)
 
 ## Requirements
 
