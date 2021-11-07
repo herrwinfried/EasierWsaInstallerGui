@@ -43,9 +43,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="checkBox">
+      <widget class="QCheckBox" name="downloadwsa">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="text">
         <string>Download WSA</string>
@@ -53,9 +53,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="checkBox_2">
+      <widget class="QCheckBox" name="downloadgapps">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="text">
         <string>Download OpenGapps</string>
@@ -177,9 +177,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>320</y>
+      <y>359</y>
       <width>1081</width>
-      <height>80</height>
+      <height>31</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -205,18 +205,59 @@
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>270</y>
-      <width>361</width>
-      <height>78</height>
+      <width>1081</width>
+      <height>80</height>
      </rect>
     </property>
-    <property name="text">
-     <string>https://github.com/HerrWinfried</string>
-    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="1">
+      <widget class="QPushButton" name="mswsl">
+       <property name="text">
+        <string>MS Store for WSL</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="msubuntu">
+       <property name="text">
+        <string>MS Store for Ubuntu</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="msopensusetw">
+       <property name="text">
+        <string>MS Store for OpenSUSE Tumbleweed</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="mygithub">
+       <property name="text">
+        <string>My GitHub</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="gappsdownloadpage">
+       <property name="text">
+        <string>OpenGapps Download Page</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="wsadownloadpage">
+       <property name="text">
+        <string>WSA Download Page</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>

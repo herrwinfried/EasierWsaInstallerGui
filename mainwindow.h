@@ -30,6 +30,25 @@ private slots:
 
     void on_buttonBox_accepted();
 
+    void on_downloadwsa_clicked(bool checked);
+
+    void on_downloadgapps_clicked(bool checked);
+
+    void on_nops_pressed();
+
+    void on_mygithub_pressed();
+
+    void on_mswsl_pressed();
+
+    void on_msubuntu_pressed();
+
+    void on_msopensusetw_pressed();
+
+
+    void on_wsadownloadpage_pressed();
+
+    void on_gappsdownloadpage_pressed();
+
 private:
     Ui::MainWindow *ui;
 };
