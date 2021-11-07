@@ -1,4 +1,5 @@
 #
+![image](https://user-images.githubusercontent.com/52379312/140661118-b6808f10-b476-426c-8da0-aec57ca40a08.png)
 
 This project is a GUI ported and simplified version of [WSA-Script](https://github.com/herrwinfried/wsa-script).
 ## Important Information
