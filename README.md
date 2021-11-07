@@ -36,3 +36,18 @@ A tool to help you access shell remotely on your WSA.
 ### **Why didn't you write about openGapps and WSA download?**
 
  How to download opengapps and wsa is available in the docs section of [WSA-Script/docs](https://github.com/herrwinfried/wsa-script/docs). You can look there.
+
+## **How Do I Download?**
+
+> NOTE: There may be a newer version when you look, so don't be fooled by the version.
+
+![image](https://user-images.githubusercontent.com/52379312/140661296-816d7db5-c0e8-466e-a179-ebe33abcf23b.png)
+
+Click on "WSAGui 1.0.0 - Portable".
+
+![image](https://user-images.githubusercontent.com/52379312/140661350-5578335a-6150-41b1-8f8c-4ad5f6e88f1a.png)
+
+Download the one that says "wsagui_beta_1.0.0-portable.zip".
+
+To run it, extract the zip, then press the WSAgui(.exe) file inside.
+
