@@ -1,7 +1,8 @@
 #
+This project is a GUI ported and simplified version of [WSA-Script](https://github.com/herrwinfried/wsa-script).
+
 ![image](https://user-images.githubusercontent.com/52379312/140661118-b6808f10-b476-426c-8da0-aec57ca40a08.png)
 
-This project is a GUI ported and simplified version of [WSA-Script](https://github.com/herrwinfried/wsa-script).
 ## Important Information
 **You need to delete the pre-installed WSA. You cannot get updates from Microsoft Store after installing WSA.**
 
@@ -10,14 +11,20 @@ This project is a GUI ported and simplified version of [WSA-Script](https://gith
 ## Information
 if you want to handle things with terminal. [Click here](https://github.com/herrwinfried/wsa-scriptg)
 
+## An amateur video showing the installation
+
+[![q_yd7DohKQA](https://img.youtube.com/vi/iL2ux-dNL84/0.jpg)](https://www.youtube.com/watch?v=iL2ux-dNL84)
+
+https://youtu.be/iL2ux-dNL84
+
 ## Requirements
 
 - Windows 11
 - [Powershell 7+](https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d)
-- [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6) or [openSUSE Tumbleweed](https://www.microsoft.com/en-us/p/opensuse-tumbleweed/9mssk2zxxn11)
-- [WSL](https://aka.ms/wslstorepage)
 - [Developer mode must be on](https://github.com/herrwinfried/wsa-gui/blob/main/docs/developermode.md)
 - [Active Virtual Machine Platform](https://github.com/herrwinfried/wsa-gui/blob/main/docs/vmp.md)
+- [WSL](https://aka.ms/wslstorepage) or [internal wsl](https://github.com/herrwinfried/wsa-gui/blob/main/docs/internalwsl.md)
+- [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6) or [openSUSE Tumbleweed](https://www.microsoft.com/en-us/p/opensuse-tumbleweed/9mssk2zxxn11)
 
 > **NOTE: You can also install Powershell from outside the ms store. But it should run as pwsh.exe. You can install WSL internally outside of MS Store, it might be more robust.**
 
@@ -50,4 +57,3 @@ Click on "WSAGui 1.0.0 - Portable".
 Download the one that says "wsagui_beta_1.0.0-portable.zip".
 
 To run it, extract the zip, then press the WSAgui(.exe) file inside.
-
