@@ -132,7 +132,7 @@ void MainWindow::on_buttonBox_accepted()
   }
 
   if (ui->adb->isChecked()){
-    commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/r31.0.3-windows.ps1 -OutFile $HOME/Downloads/r31.0.3-windows.ps1 && cd $HOME/Downloads && ./r31.0.3-windows.ps1 && Remove-Item ./r31.0.3-windows.ps1";
+    commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/r31.0.3-windows.ps1 -OutFile $HOME/Downloads/r31.0.3-windows.ps1 && cd $HOME/Downloads && ./r31.0.3-windows.ps1 && cd $HOME/Downloads && Remove-Item ./r31.0.3-windows.ps1";
   }
 
 if (ui->ubuntu->isChecked())
@@ -141,41 +141,41 @@ if (ui->ubuntu->isChecked())
     {
     if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 1 1 0 && Remove-Item ./automatic-ubuntu.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 1 1 0 && cd $HOME/Downloads && Remove-Item ./automatic-ubuntu.ps1";
 
     }
     else if (ui->downloadwsa->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 1 0 0 && Remove-Item ./automatic-ubuntu.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 1 0 0 && cd $HOME/Downloads && Remove-Item ./automatic-ubuntu.ps1";
 
     }
     else if (ui->downloadgapps->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 0 1 0 && Remove-Item ./automatic-ubuntu.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 0 1 0 && cd $HOME/Downloads && Remove-Item ./automatic-ubuntu.ps1";
     }
     else {
 
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 0 0 0 && Remove-Item ./automatic-ubuntu.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 0 0 0 && cd $HOME/Downloads && Remove-Item ./automatic-ubuntu.ps1";
 }
     }
     else {
         if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 1 1 1 && Remove-Item ./automatic-ubuntu.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 1 1 1 && cd $HOME/Downloads && Remove-Item ./automatic-ubuntu.ps1";
 
         }
         else if (ui->downloadwsa->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 1 0 1 && Remove-Item ./automatic-ubuntu.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 1 0 1 && cd $HOME/Downloads && Remove-Item ./automatic-ubuntu.ps1";
 
         }
         else if (ui->downloadgapps->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 0 1 1 && Remove-Item ./automatic-ubuntu.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 0 1 1 && cd $HOME/Downloads && Remove-Item ./automatic-ubuntu.ps1";
         }
         else {
 
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 0 0 1 && Remove-Item ./automatic-ubuntu.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 0 0 1 && cd $HOME/Downloads && Remove-Item ./automatic-ubuntu.ps1";
     }
     }
 
@@ -188,48 +188,48 @@ if (ui->opensuse->isChecked())
     {
     if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 1 1 0 && Remove-Item ./automatic-opensusetw.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 1 1 0 && cd $HOME/Downloads && Remove-Item ./automatic-opensusetw.ps1";
 
     }
     else if (ui->downloadwsa->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 1 0 0 && Remove-Item ./automatic-opensusetw.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 1 0 0 && cd $HOME/Downloads && Remove-Item ./automatic-opensusetw.ps1";
 
     }
     else if (ui->downloadgapps->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 0 1 0 && Remove-Item ./automatic-opensusetw.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 0 1 0 && cd $HOME/Downloads && Remove-Item ./automatic-opensusetw.ps1";
     }
     else {
 
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 0 0 0 && Remove-Item ./automatic-opensusetw.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 0 0 0 && cd $HOME/Downloads && Remove-Item ./automatic-opensusetw.ps1";
 }
     }
     else {
         if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 1 1 1 && Remove-Item ./automatic-opensusetw.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 1 1 1 && cd $HOME/Downloads && Remove-Item ./automatic-opensusetw.ps1";
 
         }
         else if (ui->downloadwsa->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 1 0 1 && Remove-Item ./automatic-opensusetw.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 1 0 1 && cd $HOME/Downloads && Remove-Item ./automatic-opensusetw.ps1";
 
         }
         else if (ui->downloadgapps->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 0 1 1 && Remove-Item ./automatic-opensusetw.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 0 1 1 && cd $HOME/Downloads && Remove-Item ./automatic-opensusetw.ps1";
         }
         else {
 
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 0 0 1 && Remove-Item ./automatic-opensusetw.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-opensusetw.ps1 -OutFile $HOME/Downloads/automatic-opensusetw.ps1 && cd $HOME/Downloads && ./automatic-opensusetw.ps1 0 0 1 && cd $HOME/Downloads && Remove-Item ./automatic-opensusetw.ps1";
     }
     }
 
     }
 if (ui->ubuntu->isChecked() || ui->opensuse->isChecked() || ui->adb->isChecked())
 {
-    //commandq = commandq + ";powershell.exe Remove-Item $HOME/Downloads/wsagui";
+    //commandq = commandq + ";powershell.exe cd $HOME/Downloads && Remove-Item $HOME/Downloads/wsagui";
 }
 if (ui->powershelllowanddefault->isChecked()) {
    commandq = commandq + ";powershell.exe Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine";
