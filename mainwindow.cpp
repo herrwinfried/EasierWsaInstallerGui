@@ -32,7 +32,11 @@ void MainWindow::on_buttonBox_rejected()
 void MainWindow::on_ubuntu_clicked(bool checked)
 {
     if (checked == true) {
-  ui->wsatools->setEnabled(true);
+        ui->wsatools->setEnabled(true);
+        ui->downloadgapps->setEnabled(true);
+        ui->downloadwsa->setEnabled(true);
+        ui->downloadwsa->setChecked(true);
+        ui->downloadgapps->setChecked(true);
         if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == false) {
             QMessageBox::warning(this, "If you are going to continue with Ubuntu", "This is for ubuntu without version. Also make sure OpenGapps are under 'C:\\wsaproject'. \nand ubuntu must be installed on your computer.");
         }
@@ -56,6 +60,11 @@ void MainWindow::on_opensuse_clicked(bool checked)
 {
     if (checked == true) {
             ui->wsatools->setEnabled(true);
+            ui->downloadgapps->setEnabled(true);
+            ui->downloadwsa->setEnabled(true);
+            ui->downloadwsa->setChecked(true);
+            ui->downloadgapps->setChecked(true);
+
         if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == false) {
             QMessageBox::warning(this, "If you are going to continue with OpenSUSE Tumbleweed", "This is for MS version OpenSUSE Tumbleweed. Also make sure OpenGapps are under 'C:\\wsaproject'. \nand OpenSUSE Tumbleweed must be installed on your computer.");
         }
@@ -81,6 +90,11 @@ void MainWindow::on_nowsa_clicked(bool checked)
           ui->wsatools->setChecked(false);
            ui->wsatools->setEnabled(false);
 
+            ui->downloadgapps->setChecked(false);
+           ui->downloadgapps->setEnabled(false);
+
+           ui->downloadwsa->setChecked(false);
+           ui->downloadwsa->setEnabled(false);
     ui->ubuntu->setChecked(false);
     ui->opensuse->setChecked(false);
     ui->statusBar->showMessage("WSA transactions will not be performed.", 10000);
