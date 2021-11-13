@@ -1,7 +1,7 @@
 #
 This project is a GUI ported and simplified version of [WSA-Script](https://github.com/herrwinfried/wsa-script).
 
-![image](https://user-images.githubusercontent.com/52379312/140661118-b6808f10-b476-426c-8da0-aec57ca40a08.png)
+![image](https://user-images.githubusercontent.com/52379312/141656952-5d782981-6e6c-4026-a56e-73cccc47fb35.png)
 
 ## Important Information
 **You need to delete the pre-installed WSA. You cannot get updates from Microsoft Store after installing WSA.**
