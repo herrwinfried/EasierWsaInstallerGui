@@ -50,6 +50,10 @@ private slots:
 
     void on_msdownloadpw_pressed();
 
+    void on_projectpage_pressed();
+
+    void on_licencefilego_pressed();
+
 private:
     Ui::MainWindow *ui;
 };

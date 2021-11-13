@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1108</width>
-    <height>465</height>
+    <width>1125</width>
+    <height>579</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -69,7 +69,7 @@
      <rect>
       <x>730</x>
       <y>160</y>
-      <width>460</width>
+      <width>361</width>
       <height>111</height>
      </rect>
     </property>
@@ -92,7 +92,7 @@
      <item>
       <widget class="QCheckBox" name="wsatools">
        <property name="text">
-        <string>Download and install WSATools (adb alternative) 
+        <string>Download and install WSATools (apk alternative) 
 (It offers better graphical interface for APK)</string>
        </property>
       </widget>
@@ -185,9 +185,9 @@
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>390</y>
-      <width>341</width>
+      <x>21</x>
+      <y>510</y>
+      <width>1081</width>
       <height>41</height>
      </rect>
     </property>
@@ -201,62 +201,127 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="gridLayoutWidget">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>279</y>
+      <y>290</y>
       <width>1081</width>
-      <height>91</height>
+      <height>201</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout_2">
-     <item row="0" column="1">
-      <widget class="QPushButton" name="mswsl">
-       <property name="text">
-        <string>MS Store for WSL</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="msubuntu">
-       <property name="text">
-        <string>MS Store for Ubuntu</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
-      <widget class="QPushButton" name="msopensusetw">
-       <property name="text">
-        <string>MS Store for OpenSUSE Tumbleweed</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QPushButton" name="mygithub">
-       <property name="text">
-        <string>My GitHub</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QPushButton" name="msdownloadpw">
-       <property name="text">
-        <string>MS Store for Powershell 7+</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="donatebutton">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="text">
-        <string>Donate</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>About</string>
+     </attribute>
+     <widget class="QLabel" name="label_5">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>911</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Made by Winfried. Licensed under the GNU Affero General Public License v3.0.</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>1031</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="mygithub">
+         <property name="text">
+          <string>My GitHub</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="licencefilego">
+         <property name="text">
+          <string>Go to license file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="projectpage">
+         <property name="text">
+          <string>Project Page</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="donatebutton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Donate</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Download and Links</string>
+     </attribute>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1071</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="1">
+        <widget class="QPushButton" name="mswsl">
+         <property name="text">
+          <string>MS Store for WSL</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="msopensusetw">
+         <property name="text">
+          <string>MS Store for OpenSUSE Tumbleweed</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="msdownloadpw">
+         <property name="text">
+          <string>MS Store for Powershell 7+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="msubuntu">
+         <property name="text">
+          <string>MS Store for Ubuntu</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>

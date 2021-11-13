@@ -13,8 +13,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->powershelllowanddefault->setChecked(true);
     ui->downloadgapps->setChecked(true);
     ui->downloadwsa->setChecked(true);
-QMessageBox::warning(this, "Before You Start", "since this program runs on Powershell 7+. Download Powershell from Microsoft store. If you have downloaded it, you can ignore this warning. \n \nDeveloper mode must be turned on to install WSA. \nSettings > Privacy & security > For Developers > Developer Mode");
+    QMessageBox::warning(this, "Before You Start", "since this program runs on Powershell 7+. Download Powershell from Microsoft store. If you have downloaded it, you can ignore this warning. \n \nDeveloper mode must be turned on to install WSA. \nSettings > Privacy & security > For Developers > Developer Mode");
 }
+
 
 MainWindow::~MainWindow()
 {
@@ -31,7 +32,7 @@ void MainWindow::on_buttonBox_rejected()
 void MainWindow::on_ubuntu_clicked(bool checked)
 {
     if (checked == true) {
-
+  ui->wsatools->setEnabled(true);
         if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == false) {
             QMessageBox::warning(this, "If you are going to continue with Ubuntu", "This is for ubuntu without version. Also make sure OpenGapps are under 'C:\\wsaproject'. \nand ubuntu must be installed on your computer.");
         }
@@ -44,7 +45,6 @@ void MainWindow::on_ubuntu_clicked(bool checked)
              QMessageBox::warning(this, "If you are going to continue with Ubuntu", "This is for ubuntu without version. Also make sure WSA and OpenGapps are under 'C:\\wsaproject'. \nand ubuntu must be installed on your computer.");
 
          }
-
           ui->opensuse->setChecked(false);
           ui->nowsa->setChecked(false);
           ui->statusBar->showMessage("It will be done with Ubuntu. WSA process", 10000);
@@ -55,6 +55,7 @@ void MainWindow::on_ubuntu_clicked(bool checked)
 void MainWindow::on_opensuse_clicked(bool checked)
 {
     if (checked == true) {
+            ui->wsatools->setEnabled(true);
         if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == false) {
             QMessageBox::warning(this, "If you are going to continue with OpenSUSE Tumbleweed", "This is for MS version OpenSUSE Tumbleweed. Also make sure OpenGapps are under 'C:\\wsaproject'. \nand OpenSUSE Tumbleweed must be installed on your computer.");
         }
@@ -77,9 +78,14 @@ void MainWindow::on_opensuse_clicked(bool checked)
 void MainWindow::on_nowsa_clicked(bool checked)
 {
     if (checked == true){
+          ui->wsatools->setChecked(false);
+           ui->wsatools->setEnabled(false);
+
     ui->ubuntu->setChecked(false);
     ui->opensuse->setChecked(false);
     ui->statusBar->showMessage("WSA transactions will not be performed.", 10000);
+
+
     }
 }
 
@@ -167,7 +173,7 @@ if (ui->ubuntu->isChecked()) {
     }
     else if (ui->wsatools->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 0 1 0 1 && cd $HOME/Downloads && Remove-Item ./automatic-ubuntu.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 0 0 0 1 && cd $HOME/Downloads && Remove-Item ./automatic-ubuntu.ps1";
     }
     else {
 
@@ -204,7 +210,7 @@ if (ui->ubuntu->isChecked()) {
         }
         else if (ui->wsatools->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 0 1 1 1 && cd $HOME/Downloads && Remove-Item ./automatic-ubuntu.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-ubuntu.ps1 -OutFile $HOME/Downloads/automatic-ubuntu.ps1 && cd $HOME/Downloads && ./automatic-ubuntu.ps1 0 0 1 1 && cd $HOME/Downloads && Remove-Item ./automatic-ubuntu.ps1";
         }
         else {
 
@@ -509,5 +515,39 @@ void MainWindow::on_msdownloadpw_pressed()
               break;
         }
 
+}
+
+
+void MainWindow::on_projectpage_pressed()
+{
+    int ret = QMessageBox::question(this, "Redirects to a Web Page", "Redirect you to a webpage: https://github.com/herrwinfried/wsa-gui", QMessageBox::Ok | QMessageBox::Abort);
+        switch (ret) {
+          case QMessageBox::Abort:
+
+              break;
+          case QMessageBox::Ok:
+                QDesktopServices::openUrl(QUrl("https://github.com/herrwinfried/wsa-gui"));
+              break;
+          default:
+              // should never be reached
+              break;
+        }
+}
+
+
+void MainWindow::on_licencefilego_pressed()
+{
+    int ret = QMessageBox::question(this, "Redirects to a Web Page", "Redirect you to a webpage: https://github.com/herrwinfried/wsa-gui/blob/v1.0.4/LICENSE", QMessageBox::Ok | QMessageBox::Abort);
+        switch (ret) {
+          case QMessageBox::Abort:
+
+              break;
+          case QMessageBox::Ok:
+                QDesktopServices::openUrl(QUrl("https://github.com/herrwinfried/wsa-gui/blob/v1.0.4/LICENSE"));
+              break;
+          default:
+              // should never be reached
+              break;
+        }
 }
 
