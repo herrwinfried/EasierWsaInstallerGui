@@ -1,9 +1,12 @@
 #
 This project is a GUI ported and simplified version of [WSA-Script](https://github.com/herrwinfried/wsa-script).
 
-![image](https://user-images.githubusercontent.com/52379312/140661118-b6808f10-b476-426c-8da0-aec57ca40a08.png)
+![image](https://user-images.githubusercontent.com/52379312/141656952-5d782981-6e6c-4026-a56e-73cccc47fb35.png)
 
 ## Important Information
+
+**It works for WSA version 1.7x. And if you download WSA with script, it will offer you 1.7xx, not 1.8xx. Since 1.8xx is the problem. 1.7xx is downloading.**
+
 **You need to delete the pre-installed WSA. You cannot get updates from Microsoft Store after installing WSA.**
 
 > The ARM version is still beta, please give feedback when you encounter an error.

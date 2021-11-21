@@ -50,6 +50,14 @@ private slots:
 
     void on_msdownloadpw_pressed();
 
+    void on_projectpage_pressed();
+
+    void on_licencefilego_pressed();
+
+    void on_mygithub_2_pressed();
+
+    void on_tabWidget_2_tabBarClicked(int index);
+
 private:
     Ui::MainWindow *ui;
 };
