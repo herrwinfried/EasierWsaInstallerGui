@@ -223,8 +223,8 @@
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>699</width>
-        <height>106</height>
+        <width>788</width>
+        <height>121</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -267,7 +267,7 @@
         <x>10</x>
         <y>120</y>
         <width>701</width>
-        <height>101</height>
+        <height>121</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -380,13 +380,13 @@
      <rect>
       <x>750</x>
       <y>40</y>
-      <width>358</width>
-      <height>241</height>
+      <width>416</width>
+      <height>256</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="label_require">
        <property name="text">
         <string>Require</string>
        </property>
