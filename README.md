@@ -1,51 +1,47 @@
-#
-This project is a GUI ported and simplified version of [WSA-Script](https://github.com/herrwinfried/wsa-script).
+# Important warning
 
-![image](https://user-images.githubusercontent.com/52379312/141656952-5d782981-6e6c-4026-a56e-73cccc47fb35.png)
+**Do it within your own consciousness. We take no responsibility.**
 
-## Important Information
+This method is experimental. Made easy for you to enter fewer commands.
 
-**It works for WSA version 1.7x. And if you download WSA with script, it will offer you 1.7xx, not 1.8xx. Since 1.8xx is the problem. 1.7xx is downloading.**
+# What is wsa gui?
 
-**You need to delete the pre-installed WSA. You cannot get updates from Microsoft Store after installing WSA.**
+It is the graphical interface of the [wsa-script](https://github.com/herrwinfried/wsa-script) project. The main purpose is to provide you with easy installation.
 
-> The ARM version is still beta, please give feedback when you encounter an error.
+# Information before you start
 
-## Information
-if you want to handle things with terminal. [Click here](https://github.com/herrwinfried/wsa-scriptg)
+You need to remove the existing WSA.
 
-## An amateur video showing the installation
+___The ARM version is still beta, please give feedback when you encounter an error.___ 
 
-[![q_yd7DohKQA](https://img.youtube.com/vi/iL2ux-dNL84/0.jpg)](https://www.youtube.com/watch?v=iL2ux-dNL84)
 
-https://youtu.be/iL2ux-dNL84
+# What are the Requirements?
 
-## Requirements
+> You need to fully install ubuntu or opensuse tumbleweed. So you have to create a User account.
 
-- Windows 11
-- [Powershell 7+](https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d)
-- [Developer mode must be on](https://github.com/herrwinfried/wsa-gui/blob/main/docs/developermode.md)
-- [Active Virtual Machine Platform](https://github.com/herrwinfried/wsa-gui/blob/main/docs/vmp.md)
-- [WSL](https://aka.ms/wslstorepage) or [internal wsl](https://github.com/herrwinfried/wsa-gui/blob/main/docs/internalwsl.md)
+- You must have a minimum Windows 11 device. It is adjusted for Windows 11 only.
+- [Virtual Machine Platform Must Be Active](#virtual-machine-platform-must-be-active)
+- [Developer Mode must be active.](#developer-mode-must-be-turned-on) **(Applicable if you are going to use the opengapps + wsa method.)**
+- [WSL](https://aka.ms/wslstorepage)
 - [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6) or [openSUSE Tumbleweed](https://www.microsoft.com/en-us/p/opensuse-tumbleweed/9mssk2zxxn11)
+- [Powershell Core(7+)](https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d)
 
-> **NOTE: You can also install Powershell from outside the ms store. But it should run as pwsh.exe. You can install WSL internally outside of MS Store, it might be more robust.**
+[Go To "How Do I Download?"](#how-do-i-download)
 
-If you don't remove the WSA and opengapps download option, which is now selected by default in the graphical interface, it will download it for you.
+## Developer Mode must be turned on.
+> Settings > Privacy & security > For Developers > Developer Mode
+> ![image](https://user-images.githubusercontent.com/52379312/138754144-e81779ea-4c61-46c6-8860-6c39b33aab47.png)
 
-**There is one point I must warn about. It is created in the directory named wsaproject and wsa, if these folders are full, they are emptied. (except for necessary files). If you choose to download WSA and OpenGapps. Keyword files containing WSA and opengapps in the directory named wsaproject are deleted. (If you select only WSA, the file belonging to the wsa will be deleted.)**
+## **Virtual Machine Platform must be active.**
 
-If you set your Powershell level to none, it is recommended to make it default in case you run into problems.
+> Open windows terminal as administrator. You can easily enable it by typing the following command. You should have enabled Ubuntu or OpenSUSE TumbleWeed WSL when you installed it.
 
-I left an optional option for you to install adb in the program, and you may have installed adb by selecting it.
+> ```
+> dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+> ```
+> You need to Activate [WSL](https://aka.ms/wslstorepage) also to use ubuntu or openSUSE TumbleWeed
 
-### **Brief introduction for adb**
-
-A tool to help you access shell remotely on your WSA.
-
-### **Why didn't you write about openGapps and WSA download?**
-
- How to download opengapps and wsa is available in the docs section of [WSA-Script/docs](https://github.com/herrwinfried/wsa-script/docs). You can look there.
+[Go To "How Do I Download?"](#how-do-i-download)
 
 ## **How Do I Download?**
 
