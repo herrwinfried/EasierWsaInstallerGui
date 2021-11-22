@@ -21,6 +21,12 @@ You need to remove the existing WSA.
 ___The ARM version is still beta, please give feedback when you encounter an error.___ 
 
 
+## An amateur video showing the installation
+
+[![q_yd7DohKQA](https://img.youtube.com/vi/iL2ux-dNL84/0.jpg)](https://www.youtube.com/watch?v=iL2ux-dNL84)
+
+https://youtu.be/iL2ux-dNL84
+
 # What are the Requirements?
 
 > You need to fully install ubuntu or opensuse tumbleweed. So you have to create a User account.
