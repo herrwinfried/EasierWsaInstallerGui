@@ -8,6 +8,9 @@ This method is experimental. Made easy for you to enter fewer commands.
 
 It is the graphical interface of the [wsa-script](https://github.com/herrwinfried/wsa-script) project. The main purpose is to provide you with easy installation.
 
+![image](https://user-images.githubusercontent.com/52379312/142923298-9ac70ba4-2a46-45c8-bf7f-e68b3641ffc9.png)
+
+
 # Information before you start
 
 You need to remove the existing WSA.
