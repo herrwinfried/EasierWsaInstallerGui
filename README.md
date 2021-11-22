@@ -11,6 +11,9 @@ This method is experimental. Made easy for you to enter fewer commands.
 
 It is the graphical interface of the [wsa-script](https://github.com/herrwinfried/wsa-script) project. The main purpose is to provide you with easy installation.
 
+![image](https://user-images.githubusercontent.com/52379312/142925392-6f9d7b99-c4c4-4787-80bf-c0cd9ff09aa0.png)
+
+
 # Information before you start
 
 You need to remove the existing WSA.
