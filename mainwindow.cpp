@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->downloadwsa->setChecked(true);
     QMessageBox::warning(this, "Before You Start", "since this program runs on Powershell 7+. Download Powershell from Microsoft store. If you have downloaded it, you can ignore this warning. \n \nDeveloper mode must be turned on to install WSA. \nSettings > Privacy & security > For Developers > Developer Mode");
 ui->tabWidget->removeTab(2);
+ui->onlywsanone->hide();
 }
 
 
@@ -350,7 +351,7 @@ if (ui->onlywsaubuntu->isChecked() == true || ui->onlywsaopensusetw->isChecked()
 } else {
 }
 ///////////////////////////////////////////////
- QMessageBox::warning(this, "will be written on the command line", commandq);
+ //QMessageBox::warning(this, "will be written on the command line", commandq);
 int ret = QMessageBox::question(this, "Before proceeding with the installation", "Make sure you have Powershell 7+ installed and your chosen distribution (Ubuntu/OpenSUSE TW) is installed and your distribution has a user account. Also, when you press \"Yes\", the processes will start and you will receive a notification that powershell wants to start as administrator. You must allow it to run as administrator or the process will not run. \nAfter a while, when the script is run, it will ask for your root password on your distro. \n \nClick \"Yes\" if you are ready.", QMessageBox::Yes | QMessageBox::No);
 
 if (ret == QMessageBox::Yes) {
@@ -627,7 +628,6 @@ void MainWindow::on_tabWidget_2_tabBarClicked(int index)
         ui->onlywsaopensusetw->setChecked(false);
         ui->onlywsanone->setChecked(true);
         ui->onlywsanone->hide();
-        ui->downloadgapps->show();
     }
 
 }
