@@ -4,9 +4,6 @@
 
 This method is experimental. Made easy for you to enter fewer commands.
 
-
-**Except for the wsa option, the current wsa is still not downloading. This is because the WSAGAProject team for Current WSA is still working on it. So version 1.7xx is still used in the wsa + opengapps method.**
-
 # What is wsa gui?
 
 It is the graphical interface of the [wsa-script](https://github.com/herrwinfried/wsa-script) project. The main purpose is to provide you with easy installation.
