@@ -20,6 +20,7 @@ FORMS += \
 
 TRANSLATIONS += \
     WSAgui_tr_TR.ts
+    WSAgui_de_DE.ts
 CONFIG += lrelease
 CONFIG += embed_translations
 
@@ -29,4 +30,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
+    i18n.qrc \
     image.qrc

@@ -8,7 +8,7 @@ This method is experimental. Made easy for you to enter fewer commands.
 
 It is the graphical interface of the [wsa-script](https://github.com/herrwinfried/wsa-script) project. The main purpose is to provide you with easy installation.
 
-![image](https://user-images.githubusercontent.com/52379312/142923298-9ac70ba4-2a46-45c8-bf7f-e68b3641ffc9.png)
+![image](https://user-images.githubusercontent.com/52379312/142925392-6f9d7b99-c4c4-4787-80bf-c0cd9ff09aa0.png)
 
 
 # Information before you start
@@ -17,6 +17,12 @@ You need to remove the existing WSA.
 
 ___The ARM version is still beta, please give feedback when you encounter an error.___ 
 
+
+## An amateur video showing the installation
+
+[![q_yd7DohKQA](https://img.youtube.com/vi/iL2ux-dNL84/0.jpg)](https://www.youtube.com/watch?v=iL2ux-dNL84)
+
+https://youtu.be/iL2ux-dNL84
 
 # What are the Requirements?
 
