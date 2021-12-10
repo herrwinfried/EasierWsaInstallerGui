@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/i18n">
+        <file>WSAgui_de_DE.ts</file>
+        <file>WSAgui_tr_TR.ts</file>
+    </qresource>
+</RCC>

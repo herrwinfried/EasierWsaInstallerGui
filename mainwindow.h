@@ -22,9 +22,13 @@ private slots:
 
     void on_opensuse_clicked(bool checked);
 
+    void on_debian_clicked(bool checked);
+
     void on_nowsa_clicked(bool checked);
 
     void on_vmp_clicked(bool checked);
+
+    void on_activewsa_dev_clicked(bool checked);
 
     void on_nops_clicked(bool checked);
 
