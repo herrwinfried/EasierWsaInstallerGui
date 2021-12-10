@@ -209,7 +209,7 @@ void MainWindow::on_buttonBox_accepted()
   }
 
   if (ui->adb->isChecked()){
-    commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/r31.0.3-windows.ps1 -OutFile $env:TEMP/r31.0.3-windows.ps1 && cd $env:TEMP && ./r31.0.3-windows.ps1 && cd $env:TEMP && Remove-Item ./r31.0.3-windows.ps1";
+    commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/r31.0.3-windows.ps1 -OutFile $env:TEMP/r31.0.3-windows.ps1 && cd $env:TEMP && ./r31.0.3-windows.ps1 && cd $env:TEMP && Remove-Item ./r31.0.3-windows.ps1";
   }
 
 if (ui->ubuntu->isChecked()) {
@@ -217,75 +217,75 @@ if (ui->ubuntu->isChecked()) {
     {
     if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 1 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 1 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
     }
     else if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == false)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 1 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 1 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
     }
     else if (ui->downloadwsa->isChecked() == true && ui->wsatools->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 0 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 0 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
     }
  else if (ui->downloadwsa->isChecked() == true && ui->wsatools->isChecked() == false)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 0 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 0 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
     }
     else if (ui->downloadgapps->isChecked() == true&& ui->wsatools->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 1 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 1 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
     }
     else if (ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == false)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 1 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 1 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
     }
     else if (ui->wsatools->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 0 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 0 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
     }
     else {
 
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 0 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 0 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 }
     }
     else {
         if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 1 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 1 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
         }
         else if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == false)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 1 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 1 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
         }
         else if (ui->downloadwsa->isChecked() == true && ui->wsatools->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 0 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 0 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
         }
      else if (ui->downloadwsa->isChecked() == true && ui->wsatools->isChecked() == false)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 0 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 1 0 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
         }
         else if (ui->downloadgapps->isChecked() == true&& ui->wsatools->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 1 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 1 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
         }
         else if (ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == false)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 1 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 1 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
         }
         else if (ui->wsatools->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 0 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 0 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
         }
         else {
 
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 0 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Ubuntu 0 0 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
     }
     }
@@ -297,77 +297,77 @@ if (ui->opensuse->isChecked())
     {
     if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 1 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 1 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
     }
     else if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == false)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 1 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 1 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
     }
     else if (ui->downloadwsa->isChecked() == true && ui->wsatools->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 0 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 0 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
     }
     else if (ui->downloadwsa->isChecked() == true && ui->wsatools->isChecked() == false)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 0 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 0 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
     }
     else if (ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 1 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 1 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
     }
     else if (ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == false)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 1 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 1 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
     }
     else if (ui->wsatools->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 0 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 0 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
     }
     else {
 
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 0 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 0 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 }
     }
     else {
         if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 1 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 1 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
         }
         else if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == false)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 1 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 1 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
         }
         else if (ui->downloadwsa->isChecked() == true && ui->wsatools->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 0 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 0 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
         }
         else if (ui->downloadwsa->isChecked() == true && ui->wsatools->isChecked() == false)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 0 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 1 0 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
         }
         else if (ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 1 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 1 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
         }
         else if (ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == false)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 1 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 1 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
         }
         else if (ui->wsatools->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 0 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 0 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
         }
         else {
 
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 0 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 openSUSE-Tumbleweed 0 0 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
     }
 
     }
@@ -379,75 +379,75 @@ if (ui->debian->isChecked()) {
     {
     if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 1 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 1 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
     }
     else if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == false)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 1 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 1 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
     }
     else if (ui->downloadwsa->isChecked() == true && ui->wsatools->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 0 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 0 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
     }
  else if (ui->downloadwsa->isChecked() == true && ui->wsatools->isChecked() == false)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 0 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 0 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
     }
     else if (ui->downloadgapps->isChecked() == true&& ui->wsatools->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 1 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 1 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
     }
     else if (ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == false)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 1 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 1 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
     }
     else if (ui->wsatools->isChecked() == true)
     {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 0 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 0 0 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
     }
     else {
 
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 0 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 0 0 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 }
     }
     else {
         if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 1 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 1 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
         }
         else if (ui->downloadwsa->isChecked() == true && ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == false)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 1 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 1 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
         }
         else if (ui->downloadwsa->isChecked() == true && ui->wsatools->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 0 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 0 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
         }
      else if (ui->downloadwsa->isChecked() == true && ui->wsatools->isChecked() == false)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 0 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 1 0 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
         }
         else if (ui->downloadgapps->isChecked() == true&& ui->wsatools->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 1 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 1 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
         }
         else if (ui->downloadgapps->isChecked() == true && ui->wsatools->isChecked() == false)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 1 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 1 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
         }
         else if (ui->wsatools->isChecked() == true)
         {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 0 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 0 1 1 && cd $env:TEMP && Remove-Item ./automatic.ps1";
         }
         else {
 
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 0 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic.ps1 -OutFile $env:TEMP/automatic.ps1 && cd $env:TEMP && ./automatic.ps1 Debian 0 0 1 0 && cd $env:TEMP && Remove-Item ./automatic.ps1";
 
     }
     }
@@ -460,7 +460,7 @@ if (ui->ubuntu->isChecked() || ui->opensuse->isChecked() || ui->adb->isChecked()
 }
 
 if (ui->activewsa_dev->isChecked()) {
-   commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/wsadevelopermode.ps1 -OutFile $env:TEMP/wsadevelopermode.ps1 && cd $env:TEMP && ./wsadevelopermode.ps1 && cd $env:TEMP && Remove-Item ./wsadevelopermode.ps1";
+   commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/wsadevelopermode.ps1 -OutFile $env:TEMP/wsadevelopermode.ps1 && cd $env:TEMP && ./wsadevelopermode.ps1 && cd $env:TEMP && Remove-Item ./wsadevelopermode.ps1";
 }
 if (ui->powershelllowanddefault->isChecked()) {
    commandq = commandq + ";powershell.exe Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine";
@@ -471,27 +471,27 @@ if (ui->powershelllowanddefault->isChecked()) {
 if (ui->onlywsaubuntu->isChecked() == true || ui->onlywsaopensusetw->isChecked() == true || ui->onlywsadebian->isChecked() == true) {
     commandq = "Start-Process pwsh.exe -verb runas -ArgumentList '-c ";
     if (ui->adb->isChecked()){
-      commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/r31.0.3-windows.ps1 -OutFile $env:TEMP/r31.0.3-windows.ps1 && cd $env:TEMP && ./r31.0.3-windows.ps1 && cd $env:TEMP && Remove-Item ./r31.0.3-windows.ps1";
+      commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/r31.0.3-windows.ps1 -OutFile $env:TEMP/r31.0.3-windows.ps1 && cd $env:TEMP && ./r31.0.3-windows.ps1 && cd $env:TEMP && Remove-Item ./r31.0.3-windows.ps1";
     }
     if (ui->wsatools->isChecked() == true) {
     if (ui->onlywsaubuntu->isChecked() == true) {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic-onlywsa.ps1 -OutFile $env:TEMP/automatic-onlywsa.ps1 && cd $env:TEMP && ./automatic-onlywsa.ps1 Ubuntu 1 1 1 && cd $env:TEMP && Remove-Item ./automatic-onlywsa.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-onlywsa.ps1 -OutFile $env:TEMP/automatic-onlywsa.ps1 && cd $env:TEMP && ./automatic-onlywsa.ps1 Ubuntu 1 1 1 && cd $env:TEMP && Remove-Item ./automatic-onlywsa.ps1";
     }
     else if (ui->onlywsaopensusetw->isChecked() == true) {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic-onlywsa.ps1 -OutFile $env:TEMP/automatic-onlywsa.ps1 && cd $env:TEMP && ./automatic-onlywsa.ps1 openSUSE-Tumbleweed 1 1 1 && cd $env:TEMP && Remove-Item ./automatic-onlywsa.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-onlywsa.ps1 -OutFile $env:TEMP/automatic-onlywsa.ps1 && cd $env:TEMP && ./automatic-onlywsa.ps1 openSUSE-Tumbleweed 1 1 1 && cd $env:TEMP && Remove-Item ./automatic-onlywsa.ps1";
     }
     else if (ui->onlywsadebian->isChecked() == true) {
-        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic-onlywsa.ps1 -OutFile $env:TEMP/automatic-onlywsa.ps1 && cd $env:TEMP && ./automatic-onlywsa.ps1 Debian 1 1 1 && cd $env:TEMP && Remove-Item ./automatic-onlywsa.ps1";
+        commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-onlywsa.ps1 -OutFile $env:TEMP/automatic-onlywsa.ps1 && cd $env:TEMP && ./automatic-onlywsa.ps1 Debian 1 1 1 && cd $env:TEMP && Remove-Item ./automatic-onlywsa.ps1";
     }
      } else {
         if (ui->onlywsaubuntu->isChecked() == true) {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic-onlywsa.ps1 -OutFile $env:TEMP/automatic-onlywsa.ps1 && cd $env:TEMP && ./automatic-onlywsa.ps1 Ubuntu 1 1 0 && cd $env:TEMP && Remove-Item ./automatic-onlywsa.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-onlywsa.ps1 -OutFile $env:TEMP/automatic-onlywsa.ps1 && cd $env:TEMP && ./automatic-onlywsa.ps1 Ubuntu 1 1 0 && cd $env:TEMP && Remove-Item ./automatic-onlywsa.ps1";
         }
         else if (ui->onlywsaopensusetw->isChecked() == true) {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic-onlywsa.ps1 -OutFile $env:TEMP/automatic-onlywsa.ps1 && cd $env:TEMP && ./automatic-onlywsa.ps1 openSUSE-Tumbleweed 1 1 0 && cd $env:TEMP && Remove-Item ./automatic-onlywsa.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-onlywsa.ps1 -OutFile $env:TEMP/automatic-onlywsa.ps1 && cd $env:TEMP && ./automatic-onlywsa.ps1 openSUSE-Tumbleweed 1 1 0 && cd $env:TEMP && Remove-Item ./automatic-onlywsa.ps1";
         }
         else if (ui->onlywsadebian->isChecked() == true) {
-            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/powershell/automatic-onlywsa.ps1 -OutFile $env:TEMP/automatic-onlywsa.ps1 && cd $env:TEMP && ./automatic-onlywsa.ps1 Debian 1 1 0 && cd $env:TEMP && Remove-Item ./automatic-onlywsa.ps1";
+            commandq = commandq + ";Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/1.0.1/powershell/automatic-onlywsa.ps1 -OutFile $env:TEMP/automatic-onlywsa.ps1 && cd $env:TEMP && ./automatic-onlywsa.ps1 Debian 1 1 0 && cd $env:TEMP && Remove-Item ./automatic-onlywsa.ps1";
         }
          }
     commandq = commandq + "'";
@@ -725,7 +725,7 @@ void MainWindow::on_licencefilego_pressed()
 
               break;
           case QMessageBox::Ok:
-                QDesktopServices::openUrl(QUrl("https://github.com/herrwinfried/wsa-gui/blob/v1.0.4/LICENSE"));
+                QDesktopServices::openUrl(QUrl("https://github.com/herrwinfried/wsa-gui/blob/v1.0.6/LICENSE"));
               break;
           default:
               // should never be reached
