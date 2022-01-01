@@ -6,483 +6,717 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1300</width>
-    <height>634</height>
+    <width>1043</width>
+    <height>689</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>WSA Installed GUI[BETA]</string>
+   <string> [BETA] WSA Gui (WSA AND OPENGAPPS METHOD)</string>
   </property>
   <property name="windowIcon">
    <iconset resource="image.qrc">
-    <normaloff>:/images/52379312.png</normaloff>:/images/52379312.png</iconset>
+    <normaloff>:/image/wsa-opengapps.png</normaloff>:/image/wsa-opengapps.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="horizontalLayoutWidget">
+   <widget class="QPushButton" name="switchbutton">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>560</y>
-      <width>1261</width>
-      <height>41</height>
+      <x>390</x>
+      <y>540</y>
+      <width>361</width>
+      <height>29</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="text">
+     <string>Switch to Only WSA(Original) method</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>461</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QDialogButtonBox" name="buttonBox">
-       <property name="toolTip">
-        <string/>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Powershell security mode</string>
        </property>
-       <property name="standardButtons">
-        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="powershell1">
+       <property name="text">
+        <string>To run powershell, lower the security level and set it to 
+the default permission level after the processes are finished.</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="powershell2">
+       <property name="text">
+        <string>Lower the security level to run powershell.</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="powershell_none">
+       <property name="text">
+        <string>None</string>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
+   <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>370</y>
-      <width>1261</width>
-      <height>181</height>
+      <x>10</x>
+      <y>580</y>
+      <width>1021</width>
+      <height>41</height>
      </rect>
     </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <property name="usesScrollButtons">
-     <bool>true</bool>
-    </property>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>About</string>
-     </attribute>
-     <widget class="QLabel" name="label_5">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>911</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Made by Winfried. Licensed under the GNU Affero General Public License v3.0.</string>
-      </property>
-     </widget>
-     <widget class="QWidget" name="gridLayoutWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>60</y>
-        <width>1221</width>
-        <height>85</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="1">
-        <widget class="QPushButton" name="projectpage">
-         <property name="text">
-          <string>Project Page</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QPushButton" name="licencefilego">
-         <property name="text">
-          <string>Go to license file</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="mygithub">
-         <property name="text">
-          <string>My GitHub</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <attribute name="title">
-      <string>Download and Links</string>
-     </attribute>
-     <widget class="QWidget" name="gridLayoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>1231</width>
-        <height>121</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="1" column="1">
-        <widget class="QPushButton" name="mswsl">
-         <property name="text">
-          <string>MS Store for WSL</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QPushButton" name="msopensusetw">
-         <property name="text">
-          <string>MS Store for OpenSUSE Tumbleweed</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QPushButton" name="msdownloadpw">
-         <property name="text">
-          <string>MS Store for Powershell 7+</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QPushButton" name="msubuntu">
-         <property name="text">
-          <string>MS Store for Ubuntu</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_3">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <attribute name="title">
-      <string>Donate</string>
-     </attribute>
-     <widget class="QWidget" name="gridLayoutWidget_3">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>1231</width>
-        <height>131</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_3">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_6">
-         <property name="text">
-          <string>While doing this job, I did it on a voluntary basis. If you still want to throw it away, you can donate it via Brave browser.</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="donatebutton">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="text">
-          <string>Donate</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QPushButton" name="mygithub_2">
-         <property name="text">
-          <string>My GitHub</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </widget>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Made by Winfried. Licensed under the GNU Affero General Public License v3.0.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QDialogButtonBox" name="endbutton">
+       <property name="inputMethodHints">
+        <set>Qt::ImhNone</set>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::NoButton</set>
+       </property>
+       <property name="centerButtons">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QTabWidget" name="tabWidget_2">
+   <widget class="QWidget" name="verticalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>17</x>
+      <x>10</x>
       <y>10</y>
-      <width>721</width>
-      <height>351</height>
+      <width>461</width>
+      <height>154</height>
      </rect>
     </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <widget class="QWidget" name="tab_4">
-     <attribute name="title">
-      <string>WSA And OpenGapps</string>
-     </attribute>
-     <widget class="QWidget" name="verticalLayoutWidget_4">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>788</width>
-        <height>121</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
-       <item>
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>Powershell security mode</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="powershelllowanddefault">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="text">
-          <string>To run powershell, lower the security level and set it to the default permission level after the processes are finished.</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="powershelllow">
-         <property name="text">
-          <string>Lower the security level to run powershell.</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="nops">
-         <property name="text">
-          <string>None</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_3">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>150</y>
-        <width>701</width>
-        <height>154</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <item>
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>Which OS would you prefer for WSA?</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="ubuntu">
-         <property name="text">
-          <string>Ubuntu</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="debian">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="text">
-          <string>Debian [Beta]</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="opensuse">
-         <property name="text">
-          <string>OpenSUSE Tumbleweed</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="nowsa">
-         <property name="text">
-          <string>None</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_5">
-     <attribute name="title">
-      <string>Only WSA ( Original )</string>
-     </attribute>
-     <widget class="QWidget" name="gridLayoutWidget_5">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>691</width>
-        <height>221</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_5">
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_8">
-         <property name="font">
-          <font>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>WARNING</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <layout class="QVBoxLayout" name="verticalLayout">
-         <item>
-          <widget class="QLabel" name="label_7">
-           <property name="text">
-            <string>Which OS would you prefer for WSA?</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="onlywsaubuntu">
-           <property name="text">
-            <string>Ubuntu</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="onlywsadebian">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="text">
-            <string>Debian [BETA]</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="onlywsaopensusetw">
-           <property name="text">
-            <string>OpenSUSE Tumbleweed</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="onlywsanone">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="text">
-            <string>None</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_9">
-         <property name="text">
-          <string>Download and installation processes do not change the current conditions. For your information</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>750</x>
-      <y>40</y>
-      <width>449</width>
-      <height>309</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
-      <widget class="QLabel" name="label_require">
+      <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>Require</string>
+        <string>Which OS would you prefer for WSA?</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="vmp">
+      <widget class="QRadioButton" name="ubuntu">
+       <property name="statusTip">
+        <string/>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
        <property name="text">
-        <string>Activate Virtual Machine Platform</string>
+        <string>Ubuntu</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="downloadwsa">
-       <property name="enabled">
+      <widget class="QRadioButton" name="opensusetw">
+       <property name="acceptDrops">
         <bool>true</bool>
        </property>
+       <property name="statusTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>OpenSUSE Tumbleweed</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="debian">
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="statusTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Debian</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="wsa_none">
+       <property name="text">
+        <string>None</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>10</y>
+      <width>481</width>
+      <height>154</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Requirements</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="virtual_machine_platform">
+       <property name="text">
+        <string>Enable Virtual Machine Platform</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="download_wsa">
        <property name="text">
         <string>Download WSA</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="downloadgapps">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
+      <widget class="QCheckBox" name="download_gapps">
        <property name="text">
         <string>Download OpenGapps</string>
        </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="activewsa_dev">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
+      <widget class="QCheckBox" name="wsa_windows_dev">
        <property name="text">
-        <string>Activate WSA Developer Mode and
-Activate Windows Developer Mode</string>
+        <string>Enable WSA Developer Mode and Windows Developer Mode.</string>
        </property>
       </widget>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Optional</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="adb">
-         <property name="text">
-          <string>Download and install Android Platform Tools + adds path 
-(adb command)</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="wsatools">
-         <property name="text">
-          <string>Download and install WSATools (apk alternative) 
-(It offers better graphical interface for APK)</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>210</y>
+      <width>481</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Optional</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="adb">
+       <property name="text">
+        <string>Download and install Android Platform Tools + adds path 
+(adb command)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="wsatools">
+       <property name="text">
+        <string>Download and install WSATools (apk alternative) 
+(It offers better graphical interface for APK)</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>370</y>
+      <width>481</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="tempwsa_title">
+       <property name="text">
+        <string>Download the latest WSA in wsa-mirror?</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="tempwsa_true">
+       <property name="text">
+        <string>Yes</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QRadioButton" name="tempwsa_none">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QRadioButton" name="tempwsa_false">
+       <property name="text">
+        <string>No</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>430</y>
+      <width>471</width>
+      <height>94</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="1" column="2">
+      <widget class="QRadioButton" name="gapps_pico">
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleName">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleDescription">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>pico</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="gapps_super">
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleName">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleDescription">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>super</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QRadioButton" name="gapps_full">
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleName">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleDescription">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>full</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QRadioButton" name="gapps_micro">
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleName">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleDescription">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>micro</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QRadioButton" name="gapps_nano">
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleName">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleDescription">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>nano</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QRadioButton" name="gapps_aroma">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleName">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleDescription">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>aroma</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QRadioButton" name="gapps_stock">
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleName">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleDescription">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>stock</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QRadioButton" name="gapps_mini">
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleName">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleDescription">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>mini</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QRadioButton" name="gapps_none">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>none</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>471</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OpenGapps Which Variant should we download? (Recommend = pico)</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1043</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionMy_GitHub"/>
+    <addaction name="actionProject_Page"/>
+    <addaction name="actionGo_to_licence"/>
+    <addaction name="actionDonate"/>
+    <addaction name="actionAbout"/>
+    <addaction name="actionApplication_About"/>
+   </widget>
+   <widget class="QMenu" name="menuDownload">
+    <property name="title">
+     <string>Downloads and Links</string>
+    </property>
+    <addaction name="actionMS_Store_for_powershell"/>
+    <addaction name="actionMS_Store_for_WSL"/>
+    <addaction name="actionMS_Store_for_WSA"/>
+    <addaction name="actionMS_Store_for_Ubuntu"/>
+    <addaction name="actionMS_Store_for_OpenSUSE_Tumbleweed"/>
+    <addaction name="actionMS_Store_for_Debian"/>
+    <addaction name="actionMS_Store_For_WSATools"/>
+    <addaction name="actionGo_to_opengapps_page"/>
+    <addaction name="actionGo_to_rg_adguard_page_where_wsa_was_downloaded"/>
+    <addaction name="actionGo_to_wsa_mirror"/>
+   </widget>
+   <widget class="QMenu" name="menuSwitch_Method">
+    <property name="title">
+     <string>Change Method</string>
+    </property>
+    <addaction name="actionOnly_WSA_Original"/>
+   </widget>
+   <widget class="QMenu" name="menuAdvanced_Settings">
+    <property name="title">
+     <string>Advanced Settings</string>
+    </property>
+    <addaction name="actionshow_commands_to_type"/>
+   </widget>
+   <addaction name="menuDownload"/>
+   <addaction name="menuSwitch_Method"/>
+   <addaction name="menuAbout"/>
+   <addaction name="menuAdvanced_Settings"/>
+  </widget>
+  <action name="actionMS_Store_for_powershell">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/powershellicon.png</normaloff>:/image/powershellicon.png</iconset>
+   </property>
+   <property name="text">
+    <string>MS Store for %1</string>
+   </property>
+  </action>
+  <action name="actionMy_GitHub">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/github.png</normaloff>:/image/github.png</iconset>
+   </property>
+   <property name="text">
+    <string>My GitHub</string>
+   </property>
+  </action>
+  <action name="actionProject_Page">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/github.png</normaloff>:/image/github.png</iconset>
+   </property>
+   <property name="text">
+    <string>Project Page</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionGo_to_licence">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/licence.png</normaloff>:/image/licence.png</iconset>
+   </property>
+   <property name="text">
+    <string>Go to licence</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionMS_Store_for_WSL">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/linux.png</normaloff>:/image/linux.png</iconset>
+   </property>
+   <property name="text">
+    <string>MS Store for %1</string>
+   </property>
+  </action>
+  <action name="actionMS_Store_for_Ubuntu">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/ubuntu.png</normaloff>:/image/ubuntu.png</iconset>
+   </property>
+   <property name="text">
+    <string>MS Store for %1</string>
+   </property>
+  </action>
+  <action name="actionMS_Store_for_OpenSUSE_Tumbleweed">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/opensuse.png</normaloff>:/image/opensuse.png</iconset>
+   </property>
+   <property name="text">
+    <string>MS Store for %1</string>
+   </property>
+  </action>
+  <action name="actionMS_Store_for_Debian">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/debian.png</normaloff>:/image/debian.png</iconset>
+   </property>
+   <property name="text">
+    <string>MS Store for %1</string>
+   </property>
+  </action>
+  <action name="actionOnly_WSA_Original">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/change.png</normaloff>:/image/change.png</iconset>
+   </property>
+   <property name="text">
+    <string>Only WSA(Original)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionApplication_About">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/qt.png</normaloff>:/image/qt.png</iconset>
+   </property>
+   <property name="text">
+    <string>QT</string>
+   </property>
+  </action>
+  <action name="actionDonate">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/donate.png</normaloff>:/image/donate.png</iconset>
+   </property>
+   <property name="text">
+    <string>Donate</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/info.jpg</normaloff>:/image/info.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionshow_commands_to_type">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show commands to type</string>
+   </property>
+  </action>
+  <action name="actionGo_to_rg_adguard_page_where_wsa_was_downloaded">
+   <property name="text">
+    <string>Go to rg-adguard page (where wsa was downloaded)</string>
+   </property>
+  </action>
+  <action name="actionGo_to_opengapps_page">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/opengapps.png</normaloff>:/image/opengapps.png</iconset>
+   </property>
+   <property name="text">
+    <string>Go to opengapps page</string>
+   </property>
+  </action>
+  <action name="actionMS_Store_For_WSATools">
+   <property name="text">
+    <string>MS Store for %1</string>
+   </property>
+  </action>
+  <action name="actionGo_to_wsa_mirror">
+   <property name="text">
+    <string>Go To wsa-mirror</string>
+   </property>
+  </action>
+  <action name="actionMS_Store_for_WSA">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/wsa.png</normaloff>:/image/wsa.png</iconset>
+   </property>
+   <property name="text">
+    <string>MS Store for %1</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="image.qrc"/>

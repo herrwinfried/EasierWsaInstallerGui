@@ -5,18 +5,11 @@
 This method is experimental. Made easy for you to enter fewer commands.
 
 # What is wsa gui?
+wsa-gui is a project that has been converted to a wsa-script graphical interface and is intended for you to write less command lines.
 
-It is the graphical interface of the [wsa-script](https://github.com/herrwinfried/wsa-script) project. The main purpose is to provide you with easy installation.
+# Are you looking for my command line instead of the graphical interface?
 
-![image](https://user-images.githubusercontent.com/52379312/142925392-6f9d7b99-c4c4-4787-80bf-c0cd9ff09aa0.png)
-
-
-# Information before you start
-
-You need to remove the existing WSA.
-
-___The ARM version is still beta, please give feedback when you encounter an error.___ 
-
+Try our [wsa-script](https://github.com/herrwinfried/wsa-script) project
 
 ## An amateur video showing the installation
 
@@ -26,16 +19,15 @@ https://youtu.be/iL2ux-dNL84
 
 # What are the Requirements?
 
-> You need to fully install ubuntu or opensuse tumbleweed. So you have to create a User account.
+> You need to fully install ubuntu, OpenSUSE Tumbleweed or debian. So you have to create a User account.
 
 - You must have a minimum Windows 11 device. It is adjusted for Windows 11 only.
+
 - [Virtual Machine Platform Must Be Active](#virtual-machine-platform-must-be-active)
 - [Developer Mode must be active.](#developer-mode-must-be-turned-on) **(Applicable if you are going to use the opengapps + wsa method.)**
 - [WSL](https://aka.ms/wslstorepage)
-- [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6) or [openSUSE Tumbleweed](https://www.microsoft.com/en-us/p/opensuse-tumbleweed/9mssk2zxxn11)
+- [Ubuntu](https://www.microsoft.com/p/ubuntu/9nblggh4msv6), [OpenSUSE Tumbleweed](https://www.microsoft.com/p/opensuse-tumbleweed/9mssk2zxxn11) or [Debian](https://www.microsoft.com/p/debian/9msvkqc78pk6)
 - [Powershell Core(7+)](https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d)
-
-[Go To "How Do I Download?"](#how-do-i-download)
 
 ## Developer Mode must be turned on.
 > Settings > Privacy & security > For Developers > Developer Mode
@@ -43,12 +35,12 @@ https://youtu.be/iL2ux-dNL84
 
 ## **Virtual Machine Platform must be active.**
 
-> Open windows terminal as administrator. You can easily enable it by typing the following command. You should have enabled Ubuntu or OpenSUSE TumbleWeed WSL when you installed it.
+> Open windows terminal as administrator. You can easily enable it by typing the following command. You should have enabled Ubuntu, OpenSUSE Tumbleweed or Debian WSL when you installed it.
 
 > ```
 > dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 > ```
-> You need to Activate [WSL](https://aka.ms/wslstorepage) also to use ubuntu or openSUSE TumbleWeed
+> You need to Activate [WSL](https://aka.ms/wslstorepage) also to use ubuntu, openSUSE Tumbleweed or Debian
 
 [Go To "How Do I Download?"](#how-do-i-download)
 
@@ -65,3 +57,13 @@ Click on "WSAGui 1.0.0 - Portable".
 Download the one that says "wsagui_beta_1.0.0-portable.zip".
 
 To run it, extract the zip, then press the WSAgui(.exe) file inside.
+
+
+# FAQ
+
+## What is root?
+
+You can think of root as an administrator account in Windows. It can also be called a superuser in some places. If you're asking this question for WSL, it's your password when creating the user account.
+
+# Issues
+Don't forget to ask your questions on [Issues](https://github.com/herrwinfried/wsa-gui/issues), and the FAQ will be updated as you ask your questions.

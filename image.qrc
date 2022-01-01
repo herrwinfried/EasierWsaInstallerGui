@@ -1,5 +1,24 @@
-<!DOCTYPE RCC><RCC version="1.0">
-<qresource>
-    <file>images/52379312.png</file>
-</qresource>
+<RCC>
+    <qresource prefix="/">
+        <file>image/change.png</file>
+        <file>image/debian.png</file>
+        <file>image/donate.png</file>
+        <file>image/github.png</file>
+        <file>image/linux.png</file>
+        <file>image/msstore1.png</file>
+        <file>image/msstore2.png</file>
+        <file>image/opensuse.png</file>
+        <file>image/powershell.jpg</file>
+        <file>image/ubuntu.png</file>
+        <file>image/info.jpg</file>
+        <file>image/licence.png</file>
+        <file>image/powershellicon.png</file>
+        <file>image/qt.png</file>
+        <file>image/52379312.png</file>
+        <file>image/wsa.png</file>
+        <file>image/wsa-opengapps.png</file>
+        <file>image/opengapps.png</file>
+        <file>image/true.png</file>
+        <file>image/wsa-opengapps1.png</file>
+    </qresource>
 </RCC>
