@@ -1,3 +1,6 @@
+# The project has been stopped. Those who want to develop can fork and develop.
+The project has been stopped. You can try [MagiskOnWsa](https://github.com/LSPosed/MagiskOnWSA).
+
 # Important warning
 
 **Do it within your own consciousness. We take no responsibility.**
