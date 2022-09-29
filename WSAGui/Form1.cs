@@ -1056,7 +1056,7 @@ namespace WsaGui
                 TextShellNoExit = "";
             }
             string TerminalCommand = "Start-Process pwsh.exe -verb runas -ArgumentList '" + TextShellNoExit + "-c ";
-            TerminalCommand = TerminalCommand + "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/EasierWsaInstaller/beta/scripts/powershell/guisetup.ps1 -OutFile $env:TEMP/guisetup.ps1 && cd $env:TEMP && ./guisetup.ps1 " + resultAll().ToString() + " && cd $env:TEMP && Remove-Item ./guisetup.ps1;";
+            TerminalCommand = TerminalCommand + "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/EasierWsaInstaller/2.0.1/scripts/powershell/guisetup.ps1 -OutFile $env:TEMP/guisetup.ps1 && cd $env:TEMP && ./guisetup.ps1 " + resultAll().ToString() + " && cd $env:TEMP && Remove-Item ./guisetup.ps1;";
             TerminalCommand = TerminalCommand + "'";
             
             if (DeveloperModeToolStripMenuItem.Checked)
