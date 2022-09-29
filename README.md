@@ -1,7 +1,5 @@
 # Warning
 **This is an experimental project. We are not responsible for an incident that you will encounter. Do it within your own consciousness.**
-# BETA
-**Not Stable. Still under construction, not finished yet.**
 
 # What is EasierWsaInstallerGui?
 
