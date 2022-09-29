@@ -121,7 +121,6 @@ namespace WsaGui
         private string get_product_name()
         {
             string name = WsaProductName.Text;
-            //string name1 = name.Trim(new Char[] { ' ', '*', '.', ',', '-', '+' });
             string result = Regex.Replace(name, @"[^A-Za-z\\/,]+|( )+", "$1").Trim();
             return result;
         }
@@ -443,15 +442,15 @@ namespace WsaGui
             {
                 if (Lang1 == "tr")
                 {
-                    return "Lütfen seçtiðiniz daðýtým üzerinde gerekli paketlerin kurulu olduðundan emin olunuz. Ýlk üç seçenek dýþýnda size herhangi bir resmi destek saðlanmamaktadýr. Daha fazla bilgi için wsa-script projesini inceleyiniz.";
+                    return "Lütfen seçtiðiniz daðýtým üzerinde gerekli paketlerin kurulu olduðundan emin olunuz. Ýlk üç seçenek dýþýnda size herhangi bir resmi destek saðlanmamaktadýr. Daha fazla bilgi için EasierWsaInstaller projesini inceleyiniz.";
                 }
                 else if (Lang1 == "de")
                 {
-                    return "Bitte stellen Sie sicher, dass die erforderlichen Pakete auf der von Ihnen ausgewählten Distribution installiert sind. Außer für die ersten drei Optionen erhalten Sie keine offizielle Unterstützung. Weitere Informationen finden Sie im wsa-script Projekt.";
+                    return "Bitte stellen Sie sicher, dass die erforderlichen Pakete auf der von Ihnen ausgewählten Distribution installiert sind. Außer für die ersten drei Optionen erhalten Sie keine offizielle Unterstützung. Weitere Informationen finden Sie im EasierWsaInstaller Projekt.";
                 }
                 else
                 {
-                    return "Please make sure the required packages are installed on the distribution you selected. No official support is provided to you, except for the first three options. Check out the wsa-script project for more information.";
+                    return "Please make sure the required packages are installed on the distribution you selected. No official support is provided to you, except for the first three options. Check out the EasierWsaInstaller project for more information.";
                 }
             }
         }
@@ -884,7 +883,7 @@ namespace WsaGui
 
         private void projectPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string URL = "https://github.com/herrwinfried/wsa-gui";
+            string URL = "https://github.com/herrwinfried/EasierWsaInstallerGui";
             string message = Lang_Menu1("menu", URL);
             string title = Lang_Menu1_Title("menu");
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -903,7 +902,7 @@ namespace WsaGui
 
         private void wsascriptProjectPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string URL = "https://github.com/herrwinfried/wsa-script";
+            string URL = "https://github.com/herrwinfried/EasierWsaInstaller";
             string message = Lang_Menu1("menu", URL);
             string title = Lang_Menu1_Title("menu");
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -1057,7 +1056,7 @@ namespace WsaGui
                 TextShellNoExit = "";
             }
             string TerminalCommand = "Start-Process pwsh.exe -verb runas -ArgumentList '" + TextShellNoExit + "-c ";
-            TerminalCommand = TerminalCommand + "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/wsa-script/beta/scripts/powershell/guisetup.ps1 -OutFile $env:TEMP/guisetup.ps1 && cd $env:TEMP && ./guisetup.ps1 " + resultAll().ToString() + " && cd $env:TEMP && Remove-Item ./guisetup.ps1;";
+            TerminalCommand = TerminalCommand + "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/EasierWsaInstaller/beta/scripts/powershell/guisetup.ps1 -OutFile $env:TEMP/guisetup.ps1 && cd $env:TEMP && ./guisetup.ps1 " + resultAll().ToString() + " && cd $env:TEMP && Remove-Item ./guisetup.ps1;";
             TerminalCommand = TerminalCommand + "'";
             
             if (DeveloperModeToolStripMenuItem.Checked)

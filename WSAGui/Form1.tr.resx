@@ -109,12 +109,6 @@
   <data name="chooseArchToolStripMenuItem.Text" xml:space="preserve">
     <value>Arch değiştir</value>
   </data>
-  <data name="x64ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="arm64ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
   <data name="downloadsAndLinksToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>186, 24</value>
   </data>
@@ -149,40 +143,64 @@
     <value>Hakkında</value>
   </data>
   <data name="myGithubToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 26</value>
+    <value>299, 26</value>
   </data>
   <data name="myGithubToolStripMenuItem.Text" xml:space="preserve">
     <value>Github'ım</value>
   </data>
   <data name="projectPageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 26</value>
+    <value>299, 26</value>
   </data>
   <data name="projectPageToolStripMenuItem.Text" xml:space="preserve">
     <value>Proje Sayfası</value>
   </data>
   <data name="goToLicenceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 26</value>
+    <value>299, 26</value>
   </data>
   <data name="goToLicenceToolStripMenuItem.Text" xml:space="preserve">
     <value>Lisans</value>
   </data>
   <data name="wsascriptProjectPageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 26</value>
+    <value>299, 26</value>
   </data>
   <data name="wsascriptProjectPageToolStripMenuItem.Text" xml:space="preserve">
-    <value>wsa-script Proje Sayfası</value>
+    <value>EasierWsaInstaller Proje Sayfası</value>
   </data>
   <data name="donateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 26</value>
+    <value>299, 26</value>
   </data>
   <data name="donateToolStripMenuItem.Text" xml:space="preserve">
     <value>Bağış</value>
   </data>
   <data name="aboutToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 26</value>
+    <value>299, 26</value>
   </data>
   <data name="aboutToolStripMenuItem1.Text" xml:space="preserve">
     <value>Hakkında</value>
+  </data>
+  <data name="optionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 24</value>
+  </data>
+  <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Seçenekler</value>
+  </data>
+  <data name="DeveloperModeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 26</value>
+  </data>
+  <data name="DeveloperModeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Geliştirici modu</value>
+  </data>
+  <data name="powershellNoExitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 26</value>
+  </data>
+  <data name="powershellNoExitToolStripMenuItem.Text" xml:space="preserve">
+    <value>ana powershell'i asla kapatmayın</value>
+  </data>
+  <data name="clipboardCopyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 26</value>
+  </data>
+  <data name="clipboardCopyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Komutları panoya kopyalayın</value>
   </data>
   <data name="notgapps.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 24</value>
@@ -2752,6 +2770,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>[BETA] WSA GUI Yükleyici</value>
+    <value>[BETA] EasierWsaInstallerGUI Yükleyici</value>
   </data>
 </root>

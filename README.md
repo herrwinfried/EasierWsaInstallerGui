@@ -1,36 +1,18 @@
-# The project has been stopped. Those who want to develop can fork and develop.
-The project has been stopped. You can try [MagiskOnWsa](https://github.com/LSPosed/MagiskOnWSA).
+# Warning
+**This is an experimental project. We are not responsible for an incident that you will encounter. Do it within your own consciousness.**
+# BETA
+**Not Stable. Still under construction, not finished yet.**
 
-# Important warning
+# What is EasierWsaInstallerGui?
 
-**Do it within your own consciousness. We take no responsibility.**
-
-This method is experimental. Made easy for you to enter fewer commands.
-
-# What is wsa gui?
-wsa-gui is a project that has been converted to a wsa-script graphical interface and is intended for you to write less command lines.
+EasierWsaInstallerGui is a project that has been converted to a EasierWsaInstaller graphical interface and is intended for you to write less command lines.
 
 # Are you looking for my command line instead of the graphical interface?
+[Try our EasierWsaInstaller project](https://github.com/herrwinfried/EasierWsaInstaller#readme)
 
-Try our [wsa-script](https://github.com/herrwinfried/wsa-script) project
+# An amateur video showing the installation
 
-## An amateur video showing the installation
-
-[![q_yd7DohKQA](https://img.youtube.com/vi/iL2ux-dNL84/0.jpg)](https://www.youtube.com/watch?v=iL2ux-dNL84)
-
-https://youtu.be/iL2ux-dNL84
-
-# What are the Requirements?
-
-> You need to fully install ubuntu, OpenSUSE Tumbleweed or debian. So you have to create a User account.
-
-- You must have a minimum Windows 11 device. It is adjusted for Windows 11 only.
-
-- [Virtual Machine Platform Must Be Active](#virtual-machine-platform-must-be-active)
-- [Developer Mode must be active.](#developer-mode-must-be-turned-on) **(Applicable if you are going to use the opengapps + wsa method.)**
-- [WSL](https://aka.ms/wslstorepage)
-- [Ubuntu](https://www.microsoft.com/p/ubuntu/9nblggh4msv6), [OpenSUSE Tumbleweed](https://www.microsoft.com/p/opensuse-tumbleweed/9mssk2zxxn11) or [Debian](https://www.microsoft.com/p/debian/9msvkqc78pk6)
-- [Powershell Core(7+)](https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d)
+Soon...
 
 ## Developer Mode must be turned on.
 > Settings > Privacy & security > For Developers > Developer Mode

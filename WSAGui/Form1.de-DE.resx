@@ -106,12 +106,6 @@
   <data name="languageToolStripMenuItem.Text" xml:space="preserve">
     <value>Sprache</value>
   </data>
-  <data name="x64ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="arm64ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
   <data name="chooseArchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 24</value>
   </data>
@@ -146,37 +140,37 @@
     <value>Downloads und Links</value>
   </data>
   <data name="myGithubToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 26</value>
+    <value>292, 26</value>
   </data>
   <data name="myGithubToolStripMenuItem.Text" xml:space="preserve">
     <value>Mein Github</value>
   </data>
   <data name="projectPageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 26</value>
+    <value>292, 26</value>
   </data>
   <data name="projectPageToolStripMenuItem.Text" xml:space="preserve">
     <value>Projektseite</value>
   </data>
   <data name="goToLicenceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 26</value>
+    <value>292, 26</value>
   </data>
   <data name="goToLicenceToolStripMenuItem.Text" xml:space="preserve">
     <value>Lizenz</value>
   </data>
   <data name="wsascriptProjectPageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 26</value>
+    <value>292, 26</value>
   </data>
   <data name="wsascriptProjectPageToolStripMenuItem.Text" xml:space="preserve">
-    <value>wsa-script Projektseite</value>
+    <value>EasierWsaInstaller Projektseite</value>
   </data>
   <data name="donateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 26</value>
+    <value>292, 26</value>
   </data>
   <data name="donateToolStripMenuItem.Text" xml:space="preserve">
     <value>Spenden</value>
   </data>
   <data name="aboutToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 26</value>
+    <value>292, 26</value>
   </data>
   <data name="aboutToolStripMenuItem1.Text" xml:space="preserve">
     <value>Über</value>
@@ -186,6 +180,21 @@
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>Über</value>
+  </data>
+  <data name="powershellNoExitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 26</value>
+  </data>
+  <data name="powershellNoExitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Schließen Sie niemals die Haupt-Powershell</value>
+  </data>
+  <data name="clipboardCopyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 26</value>
+  </data>
+  <data name="clipboardCopyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kopieren Sie die Befehle in die Zwischenablage</value>
+  </data>
+  <data name="DeveloperModeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Entwicklermodus</value>
   </data>
   <data name="notgapps.Text" xml:space="preserve">
     <value>opengapps wird nicht installiert.</value>
