@@ -8,7 +8,7 @@ EasierWsaInstallerGui is a project that has been converted to a EasierWsaInstall
 # Are you looking for my command line instead of the graphical interface?
 [Try our EasierWsaInstaller project](https://github.com/herrwinfried/EasierWsaInstaller#readme)
 
-# An amateur video showing the installation
+# Video Showing Installation
 
 [![image](https://user-images.githubusercontent.com/52379312/193453617-98d3fdd9-d3a0-4d50-8ec2-36b77d6120ca.png)](https://youtu.be/GbHFhOz-JTk)
 
@@ -23,7 +23,7 @@ EasierWsaInstallerGui is a project that has been converted to a EasierWsaInstall
 - [Developer Mode must be active.](#developer-mode-must-be-turned-on) **(Applicable if you are going to use the MagiskOnWSA and WSAGAScript method.)**
 - [WSL](https://aka.ms/wslstorepage)
 - [Ubuntu](https://www.microsoft.com/store/productId/9PDXGNCFSCZV), [OpenSUSE Tumbleweed](https://www.microsoft.com/p/opensuse-tumbleweed/9mssk2zxxn11) or [Debian](https://www.microsoft.com/p/debian/9msvkqc78pk6)
-- [Powershell Core(7+)](https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d) **(Applicable if you are going to use the EasierWsaInstallerGui project.)**
+- [Powershell Core(7+)](https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d)
 
 ## Developer Mode must be turned on.
 > Settings > Privacy & security > For Developers > Developer Mode
