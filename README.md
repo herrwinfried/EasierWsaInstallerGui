@@ -21,7 +21,7 @@ Soon...
 - [Virtual Machine Platform Must Be Active](#virtual-machine-platform-must-be-active)
 - [Developer Mode must be active.](#developer-mode-must-be-turned-on) **(Applicable if you are going to use the MagiskOnWSA and WSAGAScript method.)**
 - [WSL](https://aka.ms/wslstorepage)
-- [Ubuntu](https://www.microsoft.com/p/ubuntu/9nblggh4msv6), [OpenSUSE Tumbleweed](https://www.microsoft.com/p/opensuse-tumbleweed/9mssk2zxxn11) or [Debian](https://www.microsoft.com/p/debian/9msvkqc78pk6)
+- [Ubuntu](https://www.microsoft.com/store/productId/9PDXGNCFSCZV), [OpenSUSE Tumbleweed](https://www.microsoft.com/p/opensuse-tumbleweed/9mssk2zxxn11) or [Debian](https://www.microsoft.com/p/debian/9msvkqc78pk6)
 - [Powershell Core(7+)](https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d) **(Applicable if you are going to use the EasierWsaInstallerGui project.)**
 
 ## Developer Mode must be turned on.
