@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Reflection.Metadata.Ecma335;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace WsaGui
 {
@@ -290,54 +291,38 @@ namespace WsaGui
             }
             string Value_productname = WsaProductName.Text;
             string Value_amazonstore;
-            if (amazon_appstore.TabIndex == 0)
-            {
-                Value_amazonstore = "yes";
-            }
-            else if (amazon_appstore.TabIndex == 1)
+
+            
+            if (String.IsNullOrEmpty(amazon_appstore.Text))
             {
                 Value_amazonstore = "no";
             }
             else
             {
-                Value_amazonstore = "no";
+                Value_amazonstore = amazon_appstore.Text;
             }
+
+            /// #################################
             string Value_wsarelease;
-            if (wsa_release_combox.TabIndex == 0)
-            {
-                Value_wsarelease = "Fast";
-            } else if (wsa_release_combox.TabIndex == 1)
-            {
-                Value_wsarelease = "Slow";
-            } else if (wsa_release_combox.TabIndex == 2)
-            {
-                Value_wsarelease = "RP";
-            } else if (wsa_release_combox.TabIndex == 3)
-            {
-                Value_wsarelease = "Retail";
-            } else
+            if (String.IsNullOrEmpty(wsa_release_combox.Text))
             {
                 Value_wsarelease = "Retail";
             }
+            else
+            {
+                Value_wsarelease = wsa_release_combox.Text;
+            }
+
+            /// #################################
             string Value_magiskversion;
-            if (magisk_version_combobox.TabIndex == 0)
+           
+            if (String.IsNullOrEmpty(magisk_version_combobox.Text))
             {
                 Value_magiskversion = "stable";
             }
-            else if (magisk_version_combobox.TabIndex == 1)
+            else
             {
-                Value_magiskversion = "beta";
-            }
-            else if (magisk_version_combobox.TabIndex == 2)
-            {
-                Value_magiskversion = "canary";
-            }
-            else if (magisk_version_combobox.TabIndex == 3)
-            {
-                Value_magiskversion = "debug";
-            } else
-            {
-                Value_magiskversion = "stable";
+                Value_magiskversion = magisk_version_combobox.Text;
             }
             string Value_gappsvalue;
 
