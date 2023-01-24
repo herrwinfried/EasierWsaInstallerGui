@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="EasierWsaInstaller/EasierWsaInstaller/Views/MainView.axaml" value="EasierWsaInstaller/EasierWsaInstaller.Desktop/EasierWsaInstaller.Desktop.csproj" />
+        <entry key="EasierWsaInstaller/EasierWsaInstaller/Views/MainWindow.axaml" value="EasierWsaInstaller/EasierWsaInstaller.Desktop/EasierWsaInstaller.Desktop.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
