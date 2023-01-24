@@ -12,9 +12,12 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
         WindowStartupLocation="CenterScreen"
         Height="530"
         Width="1200"
+        MaxHeight="530"
+        MaxWidth="1200"
         CanResize="False" 
         ExtendClientAreaToDecorationsHint="True"
         ExtendClientAreaChromeHints="NoChrome"
+
         ExtendClientAreaTitleBarHeightHint="-1"
        
         Loaded="Control_OnLoaded">
@@ -48,7 +51,7 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
                   HorizontalContentAlignment="Center"
                   BorderThickness="0"
                   Name="MinimizeButton"
-                  ToolTip.Tip="Minimize">
+                  ToolTip.Tip="Minimize" Click="MinimizeButton_OnClick">
             <Button.Resources>
               <CornerRadius x:Key="ControlCornerRadius">0</CornerRadius>
             </Button.Resources>
@@ -97,7 +100,7 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
         </StackPanel>
       </DockPanel>
     </Grid>
-        <DockPanel Canvas.Left="30" Canvas.Top="0" DockPanel.Dock="Bottom">
+        <DockPanel Name="MenuTit" Canvas.Left="30" Canvas.Top="0" DockPanel.Dock="Bottom">
             <!--
             <DockPanel.Styles>
                 <Style Selector="MenuItem">
@@ -310,6 +313,16 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
                 </Style>
             </DockPanel.Styles>
             <TextBlock Name="madeby" Text="Made by Winfried. Licensed under the GNU Affero General Public License v3.0"></TextBlock>
+        </DockPanel>
+        <DockPanel Canvas.Left="600" Canvas.Top="470" Grid.Row="4" Grid.Column="1">
+            <DockPanel.Styles>
+                <Style Selector="TextBlock">
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Foreground" Value="red"/>
+                </Style>
+            </DockPanel.Styles>
+            <TextBlock Name="unsupport" IsVisible="False" Text="NOT SUPPORT!!!"></TextBlock>
         </DockPanel>
         <DockPanel Canvas.Left="1000" Canvas.Top="490" Grid.Row="4" Grid.Column="1">
             <DockPanel.Styles>

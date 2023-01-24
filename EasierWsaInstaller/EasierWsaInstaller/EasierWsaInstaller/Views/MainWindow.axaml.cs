@@ -13,6 +13,10 @@ using Avalonia.Markup.Xaml;
 using System.Reflection.Metadata.Ecma335;
 using System.Text.RegularExpressions;
 
+using System.Runtime.InteropServices;
+using System.Threading;
+using System.Threading.Tasks;
+
 namespace EasierWsaInstaller.Views;
 using EasierWsaInstaller.ViewModels;
 
@@ -83,6 +87,8 @@ public partial class MainWindow : Window
         reset_button.Content = "Reset";
         Ready_button.Content = "Hazır!";
         Cancel_button.Content = "Çıkış";
+        unsupport.Text = "DESTEKLENMİYOR!!!";
+
 
     }
 
@@ -151,7 +157,7 @@ public partial class MainWindow : Window
         reset_button.Content = "Reset";
         Ready_button.Content = "Ready!";
         Cancel_button.Content = "Exit";
-
+        unsupport.Text = "NOT SUPPORT!!!";
     }
     
     
@@ -321,19 +327,19 @@ public partial class MainWindow : Window
 
     private void Button_OnClick(object? sender, RoutedEventArgs e)
     {
-        string OS = Environment.OSVersion.Platform.ToString();
-        if (OS != "Win32NT")
+        if (string.IsNullOrEmpty(wsa_username.Text))
         {
-            Ready_button.IsEnabled = false;
-            reset_button.IsEnabled = false;
-            Ready_button.Content = "Not Support";
+            wsa_username.Text = "redfin";
+        }
+        
+        string OS = Environment.OSVersion.Platform.ToString();
+        if (OS == "Win32NT")
+        {
+        
         }
         else
         {
-            if (string.IsNullOrEmpty(wsa_username.Text))
-            {
-                wsa_username.Text = "redfin";
-            }
+         
         }
 
     }
@@ -500,15 +506,28 @@ public partial class MainWindow : Window
 
     private void Control_OnLoaded(object? sender, RoutedEventArgs e)
     {
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) == false)
+        {
+            unsupport.IsVisible = true;
+           WindowIcon.IsVisible = false;
+           CloseButton.IsVisible = false;
+           MinimizeButton.IsVisible = false;
+        }
         string Pc_Lang = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
         if (Pc_Lang.ToString() == "tr")
         { 
-            //Language_Turkish();
+            Language_Turkish();
         }
         else
         {
-          //  Language_English();
+          Language_English();
         }
+    }
+
+    private void MinimizeButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Window hostWindow = (Window)this.VisualRoot;
+        hostWindow.WindowState = WindowState.Minimized;
     }
 }
 
