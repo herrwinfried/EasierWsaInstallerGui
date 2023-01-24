@@ -4,7 +4,7 @@
 
 Gelişen Dünyada yeni OSS projelerini deneme fırsatı vermek isterim. Bunun nedenlerinden biri WinForm ile Linux üzerinde Form üretemem. Günümün çoğu bu yıl linux ile geçti. Bu nedenle, Windows'ta geliştirdiğim projeler de dahil olmak üzere çoğunun Çapraz Platform olması benim için her zaman daha iyi.
 
-# Ne zaman hazır olacak?
+# Ne zaman Kullanılabilir olacak?
 
 Hazır olduğunda. Kodları sıfırdan yazmam gerektiği için süre belirtemiyorum.
 
@@ -12,6 +12,6 @@ Hazır olduğunda. Kodları sıfırdan yazmam gerektiği için süre belirtemiyo
 
 Muhtemelen hayır.
 
-## Peki, kullanacağınız Çerçeve nedir?
+## Peki, kullanacağınız Framework nedir?
 
 Açıkçası programlama dilini değiştirmek istemedim. Bu yüzden **[AvaloniUI](https://avaloniaui.net)** kullanacağım.
