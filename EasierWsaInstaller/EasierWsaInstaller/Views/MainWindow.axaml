@@ -48,7 +48,7 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
                   HorizontalContentAlignment="Center"
                   BorderThickness="0"
                   Name="MinimizeButton"
-                  ToolTip.Tip="Minimize">
+                  ToolTip.Tip="Minimize" Click="MinimizeButton_OnClick">
             <Button.Resources>
               <CornerRadius x:Key="ControlCornerRadius">0</CornerRadius>
             </Button.Resources>
@@ -109,9 +109,9 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
             <Menu>
                 
 
-                <MenuItem Name="Lang" Header="Language">
+                <MenuItem Name="Lang" Header="Language" IsVisible="False">
                     <MenuItem Name="lang_en" Header="English" Click="Lang_en_OnClick"/>
-                    <MenuItem Name="lang_tr" Header="Turkish" Click="Lang_tr_OnClick" />
+                    <MenuItem Name="lang_tr" Header="Turkish" Click="Lang_tr_OnClick"/>
                     <!--<Separator/>-->
                 </MenuItem>
                 <MenuItem Name="Arch_title" Header="Arch">
@@ -129,22 +129,22 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
                         </MenuItem> 
                 </MenuItem>
                 <MenuItem Name="Dal_title" Header="Downloads and Links">
-                    <MenuItem Name="msstore_pwsh" Header="MS Store for Powershell core"> </MenuItem>
-                    <MenuItem Name="msstore_wsl" Header="MS Store for WSL"> </MenuItem>
-                    <MenuItem Name="msstore_wsa" Header="MS Store for WSA"> </MenuItem>
-                    <MenuItem Name="msstore_ubuntu" Header="MS Store for Ubuntu"> </MenuItem>
-                    <MenuItem Name="msstore_debian" Header="MS Store for Debian"> </MenuItem>
-                    <MenuItem Name="msstore_opensusetw" Header="MS Store for OpenSUSE Tumbleweed"> </MenuItem>
-                    <MenuItem Name="msstore_gapps" Header="Go to openGAPPS"> </MenuItem>
-                    <MenuItem Name="msstore_rgadguard" Header="Go to rg-adguard page"/>
+                    <MenuItem Name="msstore_pwsh" Click="Msstore_pwsh_OnClick" Header="MS Store for Powershell core"> </MenuItem>
+                    <MenuItem Name="msstore_wsl" Header="MS Store for WSL" Click="Msstore_wsl_OnClick"> </MenuItem>
+                    <MenuItem Name="msstore_wsa" Header="MS Store for WSA" Click="Msstore_wsa_OnClick"> </MenuItem>
+                    <MenuItem Name="msstore_ubuntu" Header="MS Store for Ubuntu" Click="Msstore_ubuntu_OnClick"> </MenuItem>
+                    <MenuItem Name="msstore_debian" Header="MS Store for Debian" Click="Msstore_debian_OnClick"> </MenuItem>
+                    <MenuItem Name="msstore_opensusetw" Header="MS Store for OpenSUSE Tumbleweed" Click="Msstore_opensusetw_OnClick"> </MenuItem>
+                    <MenuItem Name="msstore_gapps" Header="Go to openGAPPS" Click="Msstore_gapps_OnClick"> </MenuItem>
+                    <MenuItem Name="msstore_rgadguard" Header="Go to rg-adguard page" Click="Msstore_rgadguard_OnClick"/>
                 </MenuItem>
                 <MenuItem Name="About_menu" Header="About">
-                    <MenuItem Name="MyGithub" Header="My Github"> </MenuItem>
-                    <MenuItem Name="ProjectPageM" Header="Project Page"> </MenuItem>
-                    <MenuItem Name="LicenceM" Header="License"> </MenuItem>
-                    <MenuItem Name="EProjectPageM" Header="EasierWsaInstaller Project Page"> </MenuItem>
-                    <MenuItem Name="DonateM" Header="Donate"> </MenuItem>
-                    <MenuItem Name="Aboutm" Header="About"> </MenuItem>
+                    <MenuItem Name="MyGithub" Header="My Github" Click="MyGithub_OnClick"> </MenuItem>
+                    <MenuItem Name="ProjectPageM" Header="Project Page" Click="ProjectPageM_OnClick"> </MenuItem>
+                    <MenuItem Name="LicenceM" Header="License" IsVisible="False" Click="LicenceM_OnClick"> </MenuItem>
+                    <MenuItem Name="EProjectPageM" Header="EasierWsaInstaller Project Page" Click="EProjectPageM_OnClick"> </MenuItem>
+                    <MenuItem Name="DonateM" Header="Donate" Click="DonateM_OnClick"> </MenuItem>
+                    <MenuItem Name="Aboutm" Header="About" Click="Aboutm_OnClick"> </MenuItem>
                 </MenuItem>
                 <MenuItem Name="Options_menu" Header="Options">
                     <MenuItem Name="devmode_menu" Header="Developer Mode">
@@ -238,9 +238,9 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
             <TextBlock Text=" " />
             <TextBlock Name="reqT" Text="Requirements" />
             <TextBlock Text=" " />
-            <CheckBox Name="vmp_check" IsChecked="True">Enable Virtual Machine Platform</CheckBox>
+            <CheckBox Name="vmp_check" IsChecked="True" Click="Vmp_check_OnClick">Enable Virtual Machine Platform</CheckBox>
             <TextBlock Text=" " />
-            <CheckBox Name="devmods_check" IsChecked="True" IsEnabled="False">Enable WSA Developer Mode And Windows Developer Mode</CheckBox>
+            <CheckBox Name="devmods_check" IsChecked="True" IsEnabled="False" Click="Devmods_check_OnClick">Enable WSA Developer Mode And Windows Developer Mode</CheckBox>
             <TextBlock Text=" " />
             <CheckBox Name="autosetup_check" IsChecked="True" IsEnabled="true">Install after download</CheckBox>
             <TextBlock Text=" " />
@@ -311,6 +311,18 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
             </DockPanel.Styles>
             <TextBlock Name="madeby" Text="Made by Winfried. Licensed under the GNU Affero General Public License v3.0"></TextBlock>
         </DockPanel>
+        
+        <DockPanel Canvas.Left="560" Canvas.Top="490" Grid.Row="4" Grid.Column="1">
+            <DockPanel.Styles>
+                <Style Selector="TextBlock">
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Background" Value="red"/>
+                </Style>
+            </DockPanel.Styles>
+            <TextBlock Name="unsupport" IsVisible="False" Text="Not Support!!!"></TextBlock>
+        </DockPanel>
+        
         <DockPanel Canvas.Left="1000" Canvas.Top="490" Grid.Row="4" Grid.Column="1">
             <DockPanel.Styles>
                 <Style Selector="Button">

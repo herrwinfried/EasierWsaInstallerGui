@@ -1,14 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasierWsaInstaller", "EasierWsaInstaller\EasierWsaInstaller\EasierWsaInstaller.csproj", "{B97F6395-5536-4A3C-8D4D-6589BF8035BE}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasierWsaInstaller", "EasierWsaInstaller\EasierWsaInstaller.csproj", "{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasierWsaInstaller.Android", "EasierWsaInstaller\EasierWsaInstaller.Android\EasierWsaInstaller.Android.csproj", "{6430BAFA-AACF-4573-843D-22F237950F48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasierWsaInstaller.Desktop", "EasierWsaInstaller.Desktop\EasierWsaInstaller.Desktop.csproj", "{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasierWsaInstaller.Desktop", "EasierWsaInstaller\EasierWsaInstaller.Desktop\EasierWsaInstaller.Desktop.csproj", "{A44F3815-3AF1-4391-8A39-7E8DB82B70AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasierWsaInstaller.Web", "EasierWsaInstaller.Web\EasierWsaInstaller.Web.csproj", "{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasierWsaInstaller.iOS", "EasierWsaInstaller\EasierWsaInstaller.iOS\EasierWsaInstaller.iOS.csproj", "{609E86DD-069C-4B44-9526-1D92F3F341BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasierWsaInstaller.iOS", "EasierWsaInstaller.iOS\EasierWsaInstaller.iOS.csproj", "{EBD9022F-BC83-4846-9A11-6F7F3772DC64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasierWsaInstaller.Web", "EasierWsaInstaller\EasierWsaInstaller.Web\EasierWsaInstaller.Web.csproj", "{25096947-C8AD-46B7-A118-18F861DEFFFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasierWsaInstaller.Android", "EasierWsaInstaller.Android\EasierWsaInstaller.Android.csproj", "{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3DA99C4E-89E3-4049-9C22-0A7EC60D83D8}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		global.json = global.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,29 +25,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B97F6395-5536-4A3C-8D4D-6589BF8035BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B97F6395-5536-4A3C-8D4D-6589BF8035BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B97F6395-5536-4A3C-8D4D-6589BF8035BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B97F6395-5536-4A3C-8D4D-6589BF8035BE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6430BAFA-AACF-4573-843D-22F237950F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6430BAFA-AACF-4573-843D-22F237950F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6430BAFA-AACF-4573-843D-22F237950F48}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{6430BAFA-AACF-4573-843D-22F237950F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6430BAFA-AACF-4573-843D-22F237950F48}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6430BAFA-AACF-4573-843D-22F237950F48}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{A44F3815-3AF1-4391-8A39-7E8DB82B70AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A44F3815-3AF1-4391-8A39-7E8DB82B70AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A44F3815-3AF1-4391-8A39-7E8DB82B70AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A44F3815-3AF1-4391-8A39-7E8DB82B70AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{609E86DD-069C-4B44-9526-1D92F3F341BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{609E86DD-069C-4B44-9526-1D92F3F341BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{609E86DD-069C-4B44-9526-1D92F3F341BB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{609E86DD-069C-4B44-9526-1D92F3F341BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{609E86DD-069C-4B44-9526-1D92F3F341BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{609E86DD-069C-4B44-9526-1D92F3F341BB}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{25096947-C8AD-46B7-A118-18F861DEFFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25096947-C8AD-46B7-A118-18F861DEFFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25096947-C8AD-46B7-A118-18F861DEFFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25096947-C8AD-46B7-A118-18F861DEFFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83CB65B8-011F-4ED7-BCD3-A6CFA935EF7E}
 	EndGlobalSection
 EndGlobal

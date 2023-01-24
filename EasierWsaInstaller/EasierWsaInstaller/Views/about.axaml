@@ -1,0 +1,118 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="EasierWsaInstaller.Views.about"
+        Title="about"        
+        WindowStartupLocation="CenterScreen"
+        Height="200"
+        Width="600"
+        CanResize="False" 
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        Loaded="Control_OnLoaded">
+  
+  <Canvas>
+    <Grid Name="Menu1" Width="600">
+    <!--The proper way would be not to use white as default, but somehow retrieve the users' window chrome color.-->
+      <DockPanel Background="#0A0A0A"
+                 IsHitTestVisible="False"
+                 Name="TitleBarBackground"></DockPanel>
+      <DockPanel Name="TitleBar">
+        <StackPanel Orientation="Horizontal"
+                    DockPanel.Dock="Left"
+                    Spacing="0">
+          <Image Source="/Assets/wsa.ico"
+                 Height="20"
+                 Width="20"
+                 VerticalAlignment="Center"
+                 Margin="5,0,3,0"
+                 Name="WindowIcon"></Image>
+          <NativeMenuBar DockPanel.Dock="Top"
+                         Width="100"
+                         HorizontalAlignment="Left"
+                         Name="SeamlessMenuBar"></NativeMenuBar>
+          <TextBlock></TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right"
+                    Orientation="Horizontal"
+                    Spacing="0">
+            
+
+          <Button Width="46"
+                  VerticalAlignment="Stretch"
+                  BorderThickness="0"
+                  Name="CloseButton"
+                  ToolTip.Tip="Close" Click="CloseButton_OnClick">
+            <Button.Resources>
+              <CornerRadius x:Key="ControlCornerRadius">0</CornerRadius>
+            </Button.Resources>
+            <Button.Styles>
+              <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="Red"/>
+              </Style>
+              <Style Selector="Button:not(:pointerover) /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="Transparent"/>
+              </Style>
+              <Style Selector="Button:pointerover > Path">
+                <Setter Property="Fill" Value="White"/>
+              </Style>
+              <Style Selector="Button:not(:pointerover) > Path">
+                <Setter Property="Fill" Value="{DynamicResource SystemControlForegroundBaseHighBrush}"/>
+              </Style>
+            </Button.Styles>
+            <Path Margin="10,5,10,0"
+                  Stretch="Uniform"
+                  Data="M1169 1024l879 -879l-145 -145l-879 879l-879 -879l-145 145l879 879l-879 879l145 145l879 -879l879 879l145 -145z"></Path>
+          </Button>
+
+        </StackPanel>
+      </DockPanel>
+    </Grid>
+    
+    <TextBlock Name="titledata" Text="ABOUT" Canvas.Left="290" Canvas.Top="7"/>
+    <TextBlock Text=" " />
+    <Grid ColumnDefinitions="Auto,50,Auto" RowDefinitions="Auto,Auto" Margin="40">
+      <Image Grid.Row="0" Grid.Column="0" Source="../Assets/wsa.ico" Width="75"></Image>
+      <StackPanel Grid.Row="0" Grid.Column="2">
+     <TextBlock Name="Bar1" Text="EasierWsaInstallerGUI is a graphical interface for"/> 
+<TextBlock Name="Bar2" Text="experimental EasierWsaInstaller."/>
+     <TextBlock Name="Bar3" Text="Licensed under the GNU Affero General Public License v3.0"/>
+     <TextBlock Name="BarN" Text=" "/>
+     <TextBlock Name="Bar4" Text="Made by Winfried"/>
+      </StackPanel>
+    </Grid>
+    <DockPanel Canvas.Left="530" Canvas.Top="150" Grid.Row="4" Grid.Column="1">
+      <DockPanel.Styles>
+        <Style Selector="Button">
+          <Setter Property="FontSize" Value="11"/>
+        </Style>
+
+        <Style Selector="Button#Cancel_button">
+          <Setter Property="Background" Value="Gray"/>
+          <Setter Property="Foreground" Value="white"/>
+        </Style>
+
+      </DockPanel.Styles>
+      <Grid ColumnDefinitions="Auto,2,Auto,2,Auto" RowDefinitions="Auto,Auto,Auto">
+        <Button Grid.Row="0" Grid.Column="0" Name="Cancel_button" Click="CloseButton_OnClick">Okey</Button>
+      </Grid>
+    </DockPanel>
+    <DockPanel Canvas.Left="20" Canvas.Top="150">
+      <DockPanel.Styles>
+        <Style Selector="TextBlock">
+          <Setter Property="Foreground" Value="LightBlue"/>
+          <Setter Property="Background" Value="Black"/>
+        </Style>
+        <Style Selector="TextBlock#version">
+          <Setter Property="Foreground" Value="Red"/>
+          <Setter Property="Background" Value="Black"/>
+        </Style>
+      </DockPanel.Styles>
+      <TextBlock Text="Version: "/>
+      <TextBlock Name="version" Text="ALPHA"/>
+    </DockPanel>
+  </Canvas>
+</Window>

@@ -15,3 +15,6 @@ Probably No.
 ## So what is the Framework you will be using? 
 
 Frankly, I didn't want to change the programming language. So I'm going to use **[AvaloniUI](https://avaloniaui.net)**.
+
+
+![](/images/image.png)
