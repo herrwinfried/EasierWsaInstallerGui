@@ -15,3 +15,6 @@ Muhtemelen hayır.
 ## Peki, kullanacağınız Framework nedir?
 
 Açıkçası programlama dilini değiştirmek istemedim. Bu yüzden **[AvaloniUI](https://avaloniaui.net)** kullanacağım.
+
+
+![](https://raw.githubusercontent.com/herrwinfried/EasierWsaInstallerGui/alpha/image/imagetr.png)

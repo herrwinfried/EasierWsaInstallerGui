@@ -17,4 +17,4 @@ Probably No.
 Frankly, I didn't want to change the programming language. So I'm going to use **[AvaloniUI](https://avaloniaui.net)**.
 
 
-![](/images/image.png)
+![](https://raw.githubusercontent.com/herrwinfried/EasierWsaInstallerGui/alpha/image/image.png)
