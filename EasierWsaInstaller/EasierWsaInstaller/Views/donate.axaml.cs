@@ -43,8 +43,8 @@ public partial class donate : Window
     private void Language_Turkish()
     {
         titledata.Text = "BAĞIŞ";
-        Bar1.Text = "Projeyi kurarken hiçbir zaman parayı düşünmedik.";
-        Bar2.Text = "Bu yüzden bağış yapma seçeneği bırakmıyoruz.";
+        Bar1.Text = "Projeyi yaparken hiçbir zaman parayı düşünmedim.";
+        Bar2.Text = "Bu yüzden bağış yapma seçeneği bırakmıyorum.";
         Bar3.Text = "Eğer gerçekten bağış yapmak istiyorsanız, Brave tarayıcısı ";
         Bar4.Text = "üzerinden github sayfasına bağışta bulunabilirsiniz";
         Cancelbutton.Content = "Tamam";
@@ -52,7 +52,7 @@ public partial class donate : Window
     private void Language_English()
     {
         titledata.Text = "DONATE";
-        Bar1.Text = "We never thought in terms of money while building the project.";
+        Bar1.Text = "Me never thought in terms of money while building the project.";
         Bar2.Text = "That's why we don't leave an option to donate.";
         Bar3.Text = "If you really want to donate, you can donate to the";
         Bar4.Text = "github page through the Brave browser.";

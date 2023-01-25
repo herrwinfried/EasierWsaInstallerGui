@@ -109,7 +109,7 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
             <Menu>
                 
 
-                <MenuItem Name="Lang" Header="Language" IsVisible="False">
+                <MenuItem Name="Lang" Header="Language" IsVisible="True">
                     <MenuItem Name="lang_en" Header="English" Click="Lang_en_OnClick"/>
                     <MenuItem Name="lang_tr" Header="Turkish" Click="Lang_tr_OnClick"/>
                     <!--<Separator/>-->
@@ -242,13 +242,13 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
             <TextBlock Text=" " />
             <CheckBox Name="devmods_check" IsChecked="True" IsEnabled="False" Click="Devmods_check_OnClick">Enable WSA Developer Mode And Windows Developer Mode</CheckBox>
             <TextBlock Text=" " />
-            <CheckBox Name="autosetup_check" IsChecked="True" IsEnabled="true">Install after download</CheckBox>
-            <TextBlock Text=" " />
         </StackPanel>
         
         <StackPanel Grid.Row="1" Grid.Column="2" Name="optional">
             <TextBlock Text=" " />
             <TextBlock Name="Optionals_title" Text="Optional" />
+            <TextBlock Text=" " />
+            <CheckBox Name="autosetup_check" IsChecked="True" IsEnabled="true">Install after download</CheckBox>
             <TextBlock Text=" " />
             <CheckBox Name="adb_check" IsChecked="False">Download and install Android platform tools + adds path (adb command)</CheckBox>
             <TextBlock Text=" " />
@@ -312,12 +312,12 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
             <TextBlock Name="madeby" Text="Made by Winfried. Licensed under the GNU Affero General Public License v3.0"></TextBlock>
         </DockPanel>
         
-        <DockPanel Canvas.Left="560" Canvas.Top="490" Grid.Row="4" Grid.Column="1">
+        <DockPanel Canvas.Left="560" Canvas.Top="478" Grid.Row="4" Grid.Column="1">
             <DockPanel.Styles>
                 <Style Selector="TextBlock">
-                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="FontSize" Value="18"/>
                     <Setter Property="FontWeight" Value="Bold"/>
-                    <Setter Property="Background" Value="red"/>
+                    <Setter Property="Foreground" Value="red"/>
                 </Style>
             </DockPanel.Styles>
             <TextBlock Name="unsupport" IsVisible="False" Text="Not Support!!!"></TextBlock>
@@ -344,7 +344,7 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
             </DockPanel.Styles>
         <Grid ColumnDefinitions="Auto,2,Auto,2,Auto" RowDefinitions="Auto,Auto,Auto">
             <Button Grid.Row="0" Grid.Column="0" Name="reset_button" Click="Reset_button_OnClick">Reset</Button>
-            <Button Grid.Row="0" Grid.Column="2" Click="Button_OnClick" Name="Ready_button">Ready!</Button>
+            <Button Grid.Row="0" Grid.Column="2" Click="Ready_Button_OnClick" Name="Ready_button">Ready!</Button>
             <Button Grid.Row="0" Grid.Column="4" Name="Cancel_button" Click="Exit_button_OnClick">Exit</Button>
             
         </Grid>

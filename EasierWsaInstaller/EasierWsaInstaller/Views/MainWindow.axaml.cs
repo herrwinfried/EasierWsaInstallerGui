@@ -20,6 +20,7 @@ using Avalonia.Media.Imaging;
 using MessageBox.Avalonia.DTO;
 using MessageBox.Avalonia.Enums;
 using MessageBox.Avalonia.Models;
+using TextCopy;
 using MessageBoxAvaloniaEnums = MessageBox.Avalonia.Enums;
 
 namespace EasierWsaInstaller.Views;
@@ -30,6 +31,7 @@ public partial class MainWindow : Window
 {
     private void Language_Turkish()
     {
+        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("tr");
         // MENUS
         Lang.Header = "Dil";
         lang_tr.Header = "Türkçe";
@@ -94,9 +96,10 @@ public partial class MainWindow : Window
         Cancel_button.Content = "Çıkış";
 
     }
-
+    
     private void Language_English()
     {
+        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
         // MENUS
         Lang.Header = "Language";
         lang_en.Header = "English";
@@ -479,21 +482,72 @@ public partial class MainWindow : Window
      
     }
 
-    private void Button_OnClick(object? sender, RoutedEventArgs e)
-    {
-        string OS = Environment.OSVersion.Platform.ToString();
-        if (OS != "Win32NT")
+    private async void Ready_Button_OnClick(object? sender, RoutedEventArgs e)
+    { 
+        if (string.IsNullOrEmpty(wsa_username.Text))
+                 {
+                     wsa_username.Text = "redfin";
+                 }
+        
+        
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) == true)
         {
-            Ready_button.IsEnabled = false;
-            reset_button.IsEnabled = false;
-        }
-        else
-        {
-            if (string.IsNullOrEmpty(wsa_username.Text))
+            string execCommand = "SOON...";
+            if (devmode_mod.IsChecked.ToString() == "True")
             {
-                wsa_username.Text = "redfin";
+                await MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
+                    new MessageBoxStandardParams
+                    {
+                        ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.Ok,
+                        ContentTitle = "Dev Mode - Read Command",
+                        ContentHeader = "Dev Mode - Read Command",
+                        ContentMessage = execCommand.ToString(),
+                        CanResize = false,
+                        Topmost = true,
+                        SizeToContent = SizeToContent.WidthAndHeight,
+                        WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                        Icon = MessageBoxAvaloniaEnums.Icon.Success,
+                    }).ShowDialog(this);
+            }
+            if (dev_copy.IsChecked.ToString() == "True")
+            {
+               await MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
+                    new MessageBoxStandardParams
+                    {
+                        ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.Ok,
+                        ContentTitle = "Clipboard",
+                        ContentHeader = "Clipboard",
+                        ContentMessage = "Copy Clipboard successful.",
+                        CanResize = false,
+                        Topmost = true,
+                        SizeToContent = SizeToContent.WidthAndHeight,
+                        WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                        Icon = MessageBoxAvaloniaEnums.Icon.Success,
+                    }).ShowDialog(this);
+                ClipboardService.SetText(execCommand.ToString());
+            }
+            
+            
+            var messageBoxStandardWindow = MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
+                new MessageBoxStandardParams
+                {
+                    ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.OkCancel,
+                    ContentTitle = alert_message(0),
+                    ContentHeader = alert_message(0),
+                    ContentMessage = alert_message(9),
+                    CanResize = false,
+                    Topmost = true,
+                    SizeToContent = SizeToContent.WidthAndHeight,
+                    WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                    Icon = MessageBoxAvaloniaEnums.Icon.Warning,
+                });
+            var resux = await messageBoxStandardWindow.ShowDialog(this);
+            if (resux == ButtonResult.Ok)
+            {
+                
             }
         }
+    
 
     }
 
@@ -519,6 +573,7 @@ public partial class MainWindow : Window
 
     private void Lang_tr_OnClick(object? sender, RoutedEventArgs e)
     {
+        
         Language_Turkish();
     }
 
@@ -623,12 +678,10 @@ public partial class MainWindow : Window
         if (devmode_mod.IsChecked.ToString() == "True")
         {
             devmode_mod.IsChecked = false;
-            Lang.IsVisible = false;
         }
         else
         {
             devmode_mod.IsChecked = true;
-            Lang.IsVisible = true;
         }
     }
 
@@ -664,7 +717,7 @@ public partial class MainWindow : Window
             new MessageBoxStandardParams
             {
                 
-               ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.OkAbort,
+               ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.YesNo,
                 ContentTitle = alert_message(1),
                 ContentHeader = alert_message(1),
                 ContentMessage = alert_message(6),
@@ -676,7 +729,7 @@ public partial class MainWindow : Window
             });
         var resux = await messageBoxStandardWindow.ShowDialog(this);
 
-        if (resux == ButtonResult.Ok)
+        if (resux == ButtonResult.Yes)
         {
             this.Hide();
             MainWindow a = new MainWindow();
@@ -798,7 +851,7 @@ public partial class MainWindow : Window
         var messageBoxStandardWindow = MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
             new MessageBoxStandardParams
             {
-                ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.OkAbort,
+                ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.YesNo,
                 ContentTitle = alert_message(1),
                 ContentHeader = alert_message(1),
                 ContentMessage = alert_message(4),
@@ -810,7 +863,7 @@ public partial class MainWindow : Window
             });
         var resux = await messageBoxStandardWindow.ShowDialog(this);
 
-        if (resux == ButtonResult.Ok)
+        if (resux == ButtonResult.Yes)
         {
             vmp_check.IsChecked = false;
         }
@@ -828,7 +881,7 @@ public partial class MainWindow : Window
             var messageBoxStandardWindow = MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
                 new MessageBoxStandardParams
                 {
-                    ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.OkAbort,
+                    ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.YesNo,
                     ContentTitle = alert_message(1),
                     ContentHeader = alert_message(1),
                     ContentMessage = alert_message(5),
@@ -840,7 +893,7 @@ public partial class MainWindow : Window
                 });
             var resux = await messageBoxStandardWindow.ShowDialog(this);
 
-            if (resux == ButtonResult.Ok)
+            if (resux == ButtonResult.Yes)
             {
                 devmods_check.IsChecked = false;
             }
