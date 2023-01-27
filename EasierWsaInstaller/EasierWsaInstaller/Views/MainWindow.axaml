@@ -242,6 +242,8 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
             <TextBlock Text=" " />
             <CheckBox Name="devmods_check" IsChecked="True" IsEnabled="False" Click="Devmods_check_OnClick">Enable WSA Developer Mode And Windows Developer Mode</CheckBox>
             <TextBlock Text=" " />
+            <Button Name="requireclick" Click="Requireclick_OnClick" Content="Set up prerequisite"/>
+            <TextBlock Text=" " />
         </StackPanel>
         
         <StackPanel Grid.Row="1" Grid.Column="2" Name="optional">

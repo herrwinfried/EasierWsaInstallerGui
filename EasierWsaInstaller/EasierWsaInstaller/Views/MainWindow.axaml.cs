@@ -1,32 +1,16 @@
-using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using System.Globalization;
-using System.Diagnostics;
-using ReactiveUI;
-using Avalonia.Markup.Xaml.MarkupExtensions;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Markup.Xaml;
-using System.Reflection.Metadata.Ecma335;
-using System.Text.RegularExpressions;
-using System.Runtime.InteropServices;
-using System.Threading;
-using System.Threading.Tasks;
-
-using Avalonia.Media.Imaging;
 using MessageBox.Avalonia.DTO;
 using MessageBox.Avalonia.Enums;
-using MessageBox.Avalonia.Models;
+using System.Diagnostics;
+using System.Globalization;
+using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
+using System.Threading;
 using TextCopy;
 using MessageBoxAvaloniaEnums = MessageBox.Avalonia.Enums;
 
 namespace EasierWsaInstaller.Views;
-using EasierWsaInstaller.ViewModels;
-
-
 public partial class MainWindow : Window
 {
     private void Language_Turkish()
@@ -72,9 +56,10 @@ public partial class MainWindow : Window
         reqT.Text = "Gereksinimler";
         vmp_check.Content = "Sanal Makine Platformunu Etkinleştir";
         devmods_check.Content = "WSA Geliştirici Modunu ve Windows Geliştirici Modunu Etkinleştirin";
-        autosetup_check.Content = "İndirdikte Sonra Kur";
-
+        requireclick.Content = "Önkoşulları yükle";
+        
         Optionals_title.Text = "İsteğe Bağlı";
+        autosetup_check.Content = "İndirdikte Sonra Kur";
         adb_check.Content = "Android platform araçlarını indirin ve kurun + PATH ekle (adb komutu)";
         wsatools_check.Content = "WSATools'u indirin ve kurun(apk alternatifi)";
 
@@ -141,9 +126,10 @@ public partial class MainWindow : Window
         reqT.Text = "Requirements";
         vmp_check.Content = "Enable Virtual Machine Platform";
         devmods_check.Content = "Enable WSA Developer Mode And Windows Developer Mode";
-        autosetup_check.Content = "Install after download";
+        requireclick.Content = "Set up prerequisite";
 
         Optionals_title.Text = "Optional";
+        autosetup_check.Content = "Install after download";
         adb_check.Content = "Download and install Android platform tools + adds path (adb command)";
         wsatools_check.Content = "Download and install WSATools(apk alternative)";
 
@@ -265,10 +251,11 @@ public partial class MainWindow : Window
     }
 
    string username = System.Environment.UserName.ToString();
-   string Pc_Lang = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName.ToString();
 
+   private string Pc_Lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName.ToString();
    private string alert_message(int Number)
    {
+       Pc_Lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName.ToString();
        if (Number == 0) {
            // Important Information
        if (Pc_Lang == "tr")
@@ -385,7 +372,35 @@ public partial class MainWindow : Window
        }
        else if (Number == 9)
        {
-           // Redirecting Desc
+           // Ready Button desc
+           if (Pc_Lang == "tr")
+           {
+               return
+                   "Okey düğmesine bastığınızda. İşlem başlayacak, lütfen tüm sistem gereksinimlerini karşılamanız gerektiğini unutmayın. WSL dağıtımını yanlış seçerseniz vs. Hata yaparsanız işlem başarısız olur.\n\nİşlem başladığında sistem sizden kullanıcı hesabınızın şifresini isteyebilir(WSL Dağıtımınız), bu yüzden açılacak ekranı kontrol ediniz.";
+           }
+           else
+           {
+               return
+                   "When you press the OK button. The process will start, please note that you must meet all system requirements. If you choose WSL distribution wrong etc. If you make a mistake, the process will fail.\n\nWhen the process starts, the system may ask you for your user account password(WSL Distro), so check the screen that will open.";
+           }
+       }
+       else if (Number == 10)
+       {
+           // Ready button title
+           if (Pc_Lang == "tr")
+           {
+               return
+                   "Başlamadan Önce";
+           }
+           else
+           {
+               return
+                   "Before you start";
+           }
+       }
+       else if (Number == 11)
+       {
+           // arch
            if (Pc_Lang == "tr")
            {
                return
@@ -395,6 +410,21 @@ public partial class MainWindow : Window
            {
                return
                    "Since automatic installation will take place, trying to install the arch system you choose may result in your failure.";
+           }
+       }
+       
+       else if (Number == 12)
+       {
+           // Redirecting Desc
+           if (Pc_Lang == "tr")
+           {
+               return
+                   "Sizin için önkoşulları yüklemesi gereken basit bir betik. Deneysel unutmayın!\nBu komut dosyası, Projenin gerektirdiği tüm bağımlılıkları yüklemeyi amaçlamaktadır.\nSadece kurulacak WSL dağıtımının Kullanıcı hesabını oluşturmanız yeterlidir.";
+           }
+           else
+           {
+               return
+                   "A simple script that should install the prerequisites for you. Remember experimental!\nThis script aims to install all the dependencies required by the Project.\nYou only need to create the User account of the WSL distribution to be installed.";
            }
        }
        else
@@ -422,6 +452,236 @@ public partial class MainWindow : Window
         return result;
     }
 
+    private string resultAll()
+    {
+        string selectos;
+        if (ubuntu.IsChecked.ToString() == "True")
+        {
+            selectos = "Ubuntu";
+        }
+        else if (debian.IsChecked.ToString() == "True")
+        {
+            selectos = "Debian";
+        }
+        else if (opensusetw.IsChecked.ToString() == "True")
+        {
+            selectos = "openSUSE-Tumbleweed";
+        }
+        else
+        {
+            selectos = other_distro.Text.ToString();
+        }
+
+        string selectarch;
+
+        if (arch_arm.IsChecked.ToString() == "True")
+        {
+            selectarch = "arm64";
+        }
+        else if (arch_x64.IsChecked.ToString() == "True")
+        {
+            selectarch = "amd64";
+        }
+        else
+        {
+            selectarch = "arm64";
+        }
+        string selectmethod;
+
+        if (magiskonwsalocal.IsChecked.ToString() == "True")
+        {
+            selectmethod = "magiskonwsalocal";
+        }
+        else if (wsagascript.IsChecked.ToString() == "True")
+        {
+            selectmethod = "wsagascript";
+        }
+        else
+        {
+            selectmethod = "onlywsa";
+        }
+
+        string selectvariant;
+
+        if (aroma.IsChecked.ToString() == "True")
+        {
+            selectvariant = "aroma";
+        }
+        else if (full.IsChecked.ToString() == "True")
+        {
+            selectvariant = "full";
+        }
+        else if (nano.IsChecked.ToString() == "True")
+        {
+            selectvariant = "nano";
+        }
+        else if (super.IsChecked.ToString() == "True")
+        {
+            selectvariant = "super";
+        }
+        else if (mini.IsChecked.ToString() == "True")
+        {
+            selectvariant = "mini";
+        }
+        else if (pico.IsChecked.ToString() == "True")
+        {
+            selectvariant = "pico";
+        } else if (stock.IsChecked.ToString() == "True")
+        {
+            selectvariant = "stock";
+        } else if (micro.IsChecked.ToString() == "True")
+        {
+            selectvariant = "micro";
+        }
+        else
+        {
+            selectvariant = "pico";
+        }
+
+        string selectlang;
+        Pc_Lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName.ToString();
+        if (Pc_Lang == "tr")
+        {
+            selectlang = "tr-tr";
+        }
+        else
+        {
+            selectlang = "en-us";
+        }
+        
+        
+        string valueVMP;
+
+        if (vmp_check.IsChecked.ToString() == "True")
+        {
+            valueVMP = "yes";
+        }
+        else
+        {
+            valueVMP = "no";
+        }
+        
+        string valueDEVMODE;
+
+        if (devmods_check.IsChecked.ToString() == "True")
+        {
+            valueDEVMODE = "yes";
+        }
+        else
+        {
+            valueDEVMODE = "no";
+        }
+        
+        string selectAutoMode;
+
+        if (autosetup_check.IsChecked.ToString() == "True")
+        {
+            selectAutoMode = "yes";
+        }
+        else
+        {
+            selectAutoMode = "no";
+        }
+         
+        string selectadb;
+
+        if (adb_check.IsChecked.ToString() == "True")
+        {
+            selectadb = "yes";
+        }
+        else
+        {
+            selectadb = "no";
+        }
+         
+        string selectwsatools;
+
+        if (wsatools_check.IsChecked.ToString() == "True")
+        {
+            selectwsatools = "yes";
+        }
+        else
+        {
+            selectwsatools = "no";
+        }
+         
+        string selectwsausername = wsa_username.Text.ToString();
+
+        string selectwsaRelease;
+        if (wsa_release_status.SelectedIndex == 0)
+        {
+            selectwsaRelease = "fast";
+        } else if (wsa_release_status.SelectedIndex == 1)
+        {
+            selectwsaRelease = "slow";
+        }
+        else if (wsa_release_status.SelectedIndex == 2)
+        {
+            selectwsaRelease = "rp";
+        }
+        else if (wsa_release_status.SelectedIndex == 3)
+        {
+            selectwsaRelease = "retail";
+        }
+        else
+        {
+            selectwsaRelease = "retail";
+        }
+        string selectAmazonStore;
+
+        if (amazonstore_status.SelectedIndex == 0)
+        {
+            selectAmazonStore = "yes";
+        }
+        else
+        {
+            selectAmazonStore = "no";
+        }
+
+        string selectMagiskVersion;
+
+        if (magisk_status.SelectedIndex == 0)
+        {
+            selectMagiskVersion = "stable";
+        }
+        else if (magisk_status.SelectedIndex == 1)
+        {
+            selectMagiskVersion = "beta";
+        }
+        else if (magisk_status.SelectedIndex == 2)
+        {
+            selectMagiskVersion = "canary";
+        }
+        else if (magisk_status.SelectedIndex == 3)
+        {
+            selectMagiskVersion = "debug";
+        }
+        else if (magisk_status.SelectedIndex == 4)
+        {
+            selectMagiskVersion = "release";
+        }
+        else
+        {
+            selectMagiskVersion = "stable";
+        }
+        string result;
+
+        result = "-scriptLanguage " + selectlang + " ";
+        result += "-distro " + selectos + " ";
+        result += "-arch " + selectarch + " ";
+        result += "-method " + selectmethod + " ";
+        result += "-gappsvariant " + selectvariant + " ";
+        result += "-winvmp " + valueVMP + " ";
+        result += "-windevmode " + valueDEVMODE + " ";
+        result += "-autosetup " + selectAutoMode + " ";
+        result += "-adb " + selectadb + " ";
+        result += "-wsatools " + selectwsatools + " ";
+        result += "-productname " + selectwsausername + " ";
+        result += "-amazonstore " + selectAmazonStore + " ";
+        result += "-wsarelease " + selectwsaRelease + " ";
+        result += "-magiskversion " + selectMagiskVersion + " ";
+        return result;
+    }
     private void arch_control()
     {
         string systemarch = System.Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE").ToString().ToLower();
@@ -457,7 +717,6 @@ public partial class MainWindow : Window
     {
         if (onlywsa.IsChecked.ToString() == "True")
         {
-            
             proname.IsVisible = false;
             wsa_username.IsVisible = false;
             wsa_username_func.IsVisible = false;
@@ -483,68 +742,86 @@ public partial class MainWindow : Window
     }
 
     private async void Ready_Button_OnClick(object? sender, RoutedEventArgs e)
-    { 
+    {
+        string TextShellNoExit;
         if (string.IsNullOrEmpty(wsa_username.Text))
                  {
                      wsa_username.Text = "redfin";
                  }
+        if (noexit_pwsh.IsChecked.ToString() == "True")
+        {
+            TextShellNoExit = " -noexit ";
+        }
+        else
+        {
+            TextShellNoExit = "";
+        }
+        string execCommand = "Start-Process pwsh.exe -verb runas -ArgumentList '" + TextShellNoExit + "-c ";
+        execCommand += "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/EasierWsaInstaller/alpha/src/EasierWsaInstaller/guiSupport/setup.ps1 -OutFile $env:TEMP/setup.ps1 && cd $env:TEMP && ./setup.ps1 " + resultAll().ToString() + " && cd $env:TEMP && Remove-Item ./setup.ps1;";
+        execCommand += "'";
         
+        if (devmode_mod.IsChecked.ToString() == "True")
+        {
+            await MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
+                new MessageBoxStandardParams
+                {
+                    ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.Ok,
+                    ContentTitle = "Dev Mode - Read Command",
+                    ContentHeader = "Dev Mode - Read Command",
+                    ContentMessage = execCommand.ToString(),
+                    CanResize = false,
+                    Topmost = true,
+                    MaxHeight = 300,
+                    MaxWidth = 700,
+                    WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                    Icon = MessageBoxAvaloniaEnums.Icon.Success,
+                }).ShowDialog(this);
+        }
+        if (dev_copy.IsChecked.ToString() == "True")
+        {
+            await MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
+                new MessageBoxStandardParams
+                {
+                    ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.Ok,
+                    ContentTitle = "Clipboard",
+                    ContentHeader = "Clipboard",
+                    ContentMessage = "Copy Clipboard successful.",
+                    CanResize = false,
+                    Topmost = true,
+                    SizeToContent = SizeToContent.WidthAndHeight,
+                    WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                    Icon = MessageBoxAvaloniaEnums.Icon.Success,
+                }).ShowDialog(this);
+            ClipboardService.SetText(execCommand.ToString());
+        }
         
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) == true)
         {
-            string execCommand = "SOON...";
-            if (devmode_mod.IsChecked.ToString() == "True")
-            {
-                await MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
-                    new MessageBoxStandardParams
-                    {
-                        ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.Ok,
-                        ContentTitle = "Dev Mode - Read Command",
-                        ContentHeader = "Dev Mode - Read Command",
-                        ContentMessage = execCommand.ToString(),
-                        CanResize = false,
-                        Topmost = true,
-                        SizeToContent = SizeToContent.WidthAndHeight,
-                        WindowStartupLocation = WindowStartupLocation.CenterOwner,
-                        Icon = MessageBoxAvaloniaEnums.Icon.Success,
-                    }).ShowDialog(this);
-            }
-            if (dev_copy.IsChecked.ToString() == "True")
-            {
-               await MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
-                    new MessageBoxStandardParams
-                    {
-                        ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.Ok,
-                        ContentTitle = "Clipboard",
-                        ContentHeader = "Clipboard",
-                        ContentMessage = "Copy Clipboard successful.",
-                        CanResize = false,
-                        Topmost = true,
-                        SizeToContent = SizeToContent.WidthAndHeight,
-                        WindowStartupLocation = WindowStartupLocation.CenterOwner,
-                        Icon = MessageBoxAvaloniaEnums.Icon.Success,
-                    }).ShowDialog(this);
-                ClipboardService.SetText(execCommand.ToString());
-            }
-            
             
             var messageBoxStandardWindow = MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
                 new MessageBoxStandardParams
                 {
                     ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.OkCancel,
-                    ContentTitle = alert_message(0),
-                    ContentHeader = alert_message(0),
+                    ContentTitle = alert_message(10),
+                    ContentHeader = alert_message(10),
                     ContentMessage = alert_message(9),
                     CanResize = false,
                     Topmost = true,
-                    SizeToContent = SizeToContent.WidthAndHeight,
+                    MaxHeight = 300,
+                    MaxWidth = 700,
                     WindowStartupLocation = WindowStartupLocation.CenterOwner,
                     Icon = MessageBoxAvaloniaEnums.Icon.Warning,
                 });
             var resux = await messageBoxStandardWindow.ShowDialog(this);
             if (resux == ButtonResult.Ok)
             {
-                
+                var uri = "powershell.exe";
+                var psi = new System.Diagnostics.ProcessStartInfo();
+                psi.UseShellExecute = false;
+                psi.FileName = uri;
+                psi.Arguments = execCommand.ToString();
+                Process ps = System.Diagnostics.Process.Start(psi);
+                ps.WaitForExit();
             }
         }
     
@@ -595,7 +872,7 @@ public partial class MainWindow : Window
                     ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.YesNo,
                     ContentTitle = alert_message(0),
                     ContentHeader = alert_message(0),
-                    ContentMessage = alert_message(9),
+                    ContentMessage = alert_message(11),
                     CanResize = false,
                     Topmost = true,
                     SizeToContent = SizeToContent.WidthAndHeight,
@@ -640,7 +917,7 @@ public partial class MainWindow : Window
                     ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.YesNo,
                     ContentTitle = alert_message(0),
                     ContentHeader = alert_message(0),
-                    ContentMessage = alert_message(9),
+                    ContentMessage = alert_message(11),
                     CanResize = false,
                     Topmost = true,
                     SizeToContent = SizeToContent.WidthAndHeight,
@@ -818,6 +1095,8 @@ public partial class MainWindow : Window
             CloseButton.IsVisible = false;
             MinimizeButton.IsVisible = false;
             unsupport.IsVisible = true;
+            devmode_clipboard.IsEnabled = false;
+            requireclick.IsEnabled = false;
         }
         if (Pc_Lang == "tr")
         {
@@ -827,7 +1106,7 @@ public partial class MainWindow : Window
         {
            Language_English();
         }
-        //this.Hide();    
+
         var messageBoxStandardWindow = MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
             new MessageBoxStandardParams
             {
@@ -842,7 +1121,7 @@ public partial class MainWindow : Window
                 Icon = MessageBoxAvaloniaEnums.Icon.Warning,
             });
         var resux = await messageBoxStandardWindow.ShowDialog(this);
-        //this.Show();
+
     }
 
     private async void Vmp_check_OnClick(object? sender, RoutedEventArgs e)
@@ -1189,6 +1468,37 @@ public partial class MainWindow : Window
     {
         Window hostWindow = (Window)this.VisualRoot;
         hostWindow.WindowState = WindowState.Minimized;
+    }
+
+    private async void Requireclick_OnClick(object? sender, RoutedEventArgs e)
+    {
+        var messageBoxStandardWindow = MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
+            new MessageBoxStandardParams
+            {
+                ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.OkCancel,
+                ContentTitle = alert_message(10),
+                ContentHeader = alert_message(10),
+                ContentMessage = alert_message(12),
+                CanResize = false,
+                Topmost = true,
+                SizeToContent = SizeToContent.WidthAndHeight,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                Icon = MessageBoxAvaloniaEnums.Icon.Warning,
+            });
+        var resux = await messageBoxStandardWindow.ShowDialog(this);
+        if (resux == ButtonResult.Ok)
+        {
+            string execCommand = "Start-Process pwsh.exe -verb runas -ArgumentList '" + " -noexit " + "-c ";
+            execCommand += "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/EasierWsaInstaller/alpha/src/EasierWsaInstaller/guiSupport/requirements.ps1 -OutFile $env:TEMP/requirements.ps1 && cd $env:TEMP && ./requirements.ps1 && cd $env:TEMP && Remove-Item ./requirements.ps1;";
+            execCommand += "'";
+            var uri = "powershell.exe";
+            var psi = new System.Diagnostics.ProcessStartInfo();
+            psi.UseShellExecute = false;
+            psi.FileName = uri;
+            psi.Arguments = execCommand.ToString();
+            Process ps = System.Diagnostics.Process.Start(psi);
+            ps.WaitForExit();
+        }
     }
 }
 
