@@ -135,7 +135,8 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
                     <MenuItem Name="msstore_ubuntu" Header="MS Store for Ubuntu" Click="Msstore_ubuntu_OnClick"> </MenuItem>
                     <MenuItem Name="msstore_debian" Header="MS Store for Debian" Click="Msstore_debian_OnClick"> </MenuItem>
                     <MenuItem Name="msstore_opensusetw" Header="MS Store for OpenSUSE Tumbleweed" Click="Msstore_opensusetw_OnClick"> </MenuItem>
-                    <MenuItem Name="msstore_gapps" Header="Go to openGAPPS" Click="Msstore_gapps_OnClick"> </MenuItem>
+                    <MenuItem Name="msstore_opengapps" Header="Go to OpenGapps" Click="Msstore_opengapps_OnClick"> </MenuItem>
+                    <MenuItem Name="msstore_mindthegapps" Header="Go to MindTheGapps" Click="Msstore_mindthegapps_OnClick"> </MenuItem>
                     <MenuItem Name="msstore_rgadguard" Header="Go to rg-adguard page" Click="Msstore_rgadguard_OnClick"/>
                 </MenuItem>
                 <MenuItem Name="About_menu" Header="About">
@@ -210,15 +211,23 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
     </StackPanel>
         
         <StackPanel Grid.Row="0" Grid.Column="2">
-            <TextBlock Name="Method_name" Text="Choose a Method" />
+            <Grid ColumnDefinitions="200,Auto,Auto,Auto,Auto" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+            <TextBlock Grid.Row="0" Grid.Column="0" Name="Method_name" Text="Choose a Method" />
+            <TextBlock Grid.Row="1" Grid.Column="0" Text=" " />
+            <RadioButton Grid.Row="2" Grid.Column="0" GroupName="method" Name="magiskonwsalocal" IsChecked="True" Click="Magiskonwsalocal_OnClick">MagiskOnWsaLocal</RadioButton>
+            <RadioButton Grid.Row="3" Grid.Column="0" GroupName="method" Name="wsagascript" Click="Wsagascript_OnClick">WSAGAScript</RadioButton>
+            <RadioButton Grid.Row="4" Grid.Column="0" GroupName="method" Name="onlywsa" Click="Onlywsa_OnClick">Only WSA</RadioButton>
+            <TextBlock Grid.Row="0" Grid.Column="2" Name="gapps_title" Text="Select GApps" />
+            <TextBlock Grid.Row="1" Grid.Column="2" Text=" " />
+            <RadioButton Grid.Row="2" Grid.Column="2" Click="Mindthegapps_select_OnClick" Name="mindthegapps_select" GroupName="SecGappsStatus" IsChecked="True">MindTheGapps</RadioButton>
+            <RadioButton Grid.Row="3" Grid.Column="2" Name="ogapps_select" Click="Ogapps_select_OnClick" GroupName="SecGappsStatus">OpenGapps</RadioButton>
+            </Grid>
             <TextBlock Text=" " />
-            <RadioButton GroupName="method" Name="magiskonwsalocal" IsChecked="True" Click="Magiskonwsalocal_OnClick">MagiskOnWsaLocal</RadioButton>
-            <RadioButton GroupName="method" Name="wsagascript" Click="Wsagascript_OnClick">WSAGAScript</RadioButton>
-            <RadioButton GroupName="method" Name="onlywsa" Click="Onlywsa_OnClick">Only WSA</RadioButton>
+            
         </StackPanel>
         
         <StackPanel Grid.Row="0" Grid.Column="4" Name="gapps_method">
-            <TextBlock Text="OpenGapps" />
+            <TextBlock Text="OpenGapps Variant" />
             <TextBlock Text=" " />
             <Grid ColumnDefinitions="200,Auto,Auto,Auto,Auto" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
                 <RadioButton Grid.Row="0" Grid.Column="0" Name="aroma" GroupName="gapps" IsEnabled="False">Aroma</RadioButton>

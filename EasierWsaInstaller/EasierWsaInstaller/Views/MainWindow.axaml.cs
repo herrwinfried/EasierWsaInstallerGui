@@ -29,7 +29,8 @@ public partial class MainWindow : Window
         msstore_ubuntu.Header = "Ubuntu için MS Store";
         msstore_debian.Header = "Debian için MS Store";
         msstore_opensusetw.Header = "OpenSUSE Tumbleweed için MS Store";
-        msstore_gapps.Header = "openGAPPS'e git";
+        msstore_opengapps.Header = "OpenGapps'a git";
+        msstore_mindthegapps.Header = "MindTheGapps'a git";
         msstore_rgadguard.Header = "rg-adguard sayfasına git";
 
         About_menu.Header = "Hakkında";
@@ -52,6 +53,8 @@ public partial class MainWindow : Window
 
         Method_name.Text = "Bir Yöntem Seçin";
         onlywsa.Content = "Sadece WSA";
+
+        gapps_title.Text = "Gapps Seçin";
 
         reqT.Text = "Gereksinimler";
         vmp_check.Content = "Sanal Makine Platformunu Etkinleştir";
@@ -99,7 +102,8 @@ public partial class MainWindow : Window
         msstore_ubuntu.Header = "MS Store for Ubuntu";
         msstore_debian.Header = "MS Store for Debian";
         msstore_opensusetw.Header = "MS Store for OpenSUSE Tumbleweed";
-        msstore_gapps.Header = "Go to openGAPPS";
+        msstore_opengapps.Header = "Go to openGAPPS";
+        msstore_mindthegapps.Header = "Go to MindTheGapps";
         msstore_rgadguard.Header = "Go to rg-adguard page";
 
         About_menu.Header = "About";
@@ -123,6 +127,8 @@ public partial class MainWindow : Window
         Method_name.Text = "Choose a Method";
         onlywsa.Content = "Only WSA";
 
+        gapps_title.Text = "Select Gapps";
+        
         reqT.Text = "Requirements";
         vmp_check.Content = "Enable Virtual Machine Platform";
         devmods_check.Content = "Enable WSA Developer Mode And Windows Developer Mode";
@@ -151,7 +157,74 @@ public partial class MainWindow : Window
         Cancel_button.Content = "Exit";
 
     }
-    
+
+    private void gapps_select_active()
+    {
+        if (magiskonwsalocal.IsChecked.ToString() == "True")
+        {
+            mindthegapps_select.IsChecked = true;
+            mindthegapps_select.IsVisible = true;
+            ogapps_select.IsVisible = true;
+            gapps_title.IsVisible = true;
+        }
+        else
+        {
+            ogapps_select.IsChecked = true;
+            mindthegapps_select.IsChecked = false;
+            mindthegapps_select.IsVisible = false;
+            ogapps_select.IsVisible = false;
+            gapps_title.IsVisible = false;
+        }
+    }
+    private void gapps_select_method()
+    {
+        if ((mindthegapps_select.IsVisible.ToString() == "True") && (mindthegapps_select.IsChecked.ToString() == "True"))
+        {
+            if (magiskonwsalocal.IsChecked.ToString() == "True")
+            {
+                aroma.IsEnabled = false;
+                full.IsEnabled = false;
+                nano.IsEnabled = false;
+                super.IsEnabled = false;
+                mini.IsEnabled = false;
+                pico.IsEnabled = false;
+                stock.IsEnabled = false;
+                micro.IsEnabled = false;
+                noneg.IsChecked = true;  
+            }
+            else
+            {
+                aroma.IsEnabled = false;
+                full.IsEnabled = true;
+                nano.IsEnabled = true;
+                super.IsEnabled = true;
+                mini.IsEnabled = true;
+                pico.IsEnabled = true;
+                stock.IsEnabled = true;
+                micro.IsEnabled = true;
+                if (noneg.IsChecked.ToString() == "True") {
+                    noneg.IsChecked = false; 
+                    pico.IsChecked = true;
+                }
+            }
+        }
+        else
+        {
+            aroma.IsEnabled = false;
+            full.IsEnabled = true;
+            nano.IsEnabled = true;
+            super.IsEnabled = true;
+            mini.IsEnabled = true;
+            pico.IsEnabled = true;
+            stock.IsEnabled = true;
+            micro.IsEnabled = true;
+            if (noneg.IsChecked.ToString() == "True") {
+                noneg.IsChecked = false; 
+                pico.IsChecked = true;
+            }
+        }
+    }
+
     
     private void os_limit()
     {
@@ -282,11 +355,11 @@ public partial class MainWindow : Window
            // Welcome Message
            if (Pc_Lang == "tr")
            {
-               return "Kurulum sırasında gerekli programların kurulu olduğundan emin olunuz.\nBunlardan bazıları Powershell (core), WSL, WSL Dağıtım, vb. \nDaha fazla bilgi için proje sayfasını kontrol edin.";
+               return "Kurulum sırasında gerekli programların kurulu olduğundan emin olunuz.\nGereksinimler Bölmesindeki buton basarak yükliyebilirsiniz.\nGereksinimler hakkında Daha fazla bilgi için proje sayfasını kontrol edin.";
            }
            else
            {
-               return "Make sure that the necessary programs are installed while installing.\nSome of them are Powershell (core), \nWSL, WSL Distro, etc.. For more information, check the project page.";
+               return "Make sure that the required programs are installed during installation.\nYou can install them by press the button in the Requirements Pane.\nCheck the project page for more information about the requirements.";
            }
        }
        else if (Number == 3) {
@@ -427,6 +500,20 @@ public partial class MainWindow : Window
                    "A simple script that should install the prerequisites for you. Remember experimental!\nThis script aims to install all the dependencies required by the Project.\nYou only need to create the User account of the WSL distribution to be installed.";
            }
        }
+       else if (Number == 13)
+       {
+           // wsagascript text
+           if (Pc_Lang == "tr")
+           {
+               return
+                   "Bu methodun kullanılması önerilmez. Artık kullanılmıyor ve method sahibi\ntarafından güncelleme almıyor.";
+           }
+           else
+           {
+               return
+                   "It is not recommended to use this method. It is now obsolete and the\nmethod does not receive updates by the owner.";
+           }
+       }
        else
        {
            return "";
@@ -501,6 +588,17 @@ public partial class MainWindow : Window
             selectmethod = "onlywsa";
         }
 
+        string selectgapps;
+
+        if (mindthegapps_select.IsVisible.ToString() == "True" && mindthegapps_select.IsChecked.ToString() == "True")
+        {
+            selectgapps = "mindthegapps";
+        }
+        else
+        {
+            selectgapps = "opengapps";
+        }
+        
         string selectvariant;
 
         if (aroma.IsChecked.ToString() == "True")
@@ -670,6 +768,7 @@ public partial class MainWindow : Window
         result += "-distro " + selectos + " ";
         result += "-arch " + selectarch + " ";
         result += "-method " + selectmethod + " ";
+        result += "-gapps " + selectgapps + " ";
         result += "-gappsvariant " + selectvariant + " ";
         result += "-winvmp " + valueVMP + " ";
         result += "-windevmode " + valueDEVMODE + " ";
@@ -757,7 +856,7 @@ public partial class MainWindow : Window
             TextShellNoExit = "";
         }
         string execCommand = "Start-Process pwsh.exe -verb runas -ArgumentList '" + TextShellNoExit + "-c ";
-        execCommand += "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/EasierWsaInstaller/alpha/src/EasierWsaInstaller/guiSupport/setup.ps1 -OutFile $env:TEMP/setup.ps1 && cd $env:TEMP && ./setup.ps1 " + resultAll().ToString() + " && cd $env:TEMP && Remove-Item ./setup.ps1;";
+        execCommand += "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/EasierWsaInstaller/main/src/EasierWsaInstaller/guiSupport/setup.ps1 -OutFile $env:TEMP/setup.ps1 && cd $env:TEMP && ./setup.ps1 " + resultAll().ToString() + " && cd $env:TEMP && Remove-Item ./setup.ps1;";
         execCommand += "'";
         
         if (devmode_mod.IsChecked.ToString() == "True")
@@ -1047,7 +1146,8 @@ public partial class MainWindow : Window
                 Icon = MessageBoxAvaloniaEnums.Icon.Warning,
             });
         var resux = await messageBoxStandardWindow.ShowDialog(this);
-        os_limit();  
+        os_limit();
+       
        
         
 
@@ -1059,14 +1159,34 @@ public partial class MainWindow : Window
         devmod_button_select();
         magisk_select();
         wsausername_amazon_select();
+        gapps_select_active();
+        gapps_select_method();
+        
     }
 
-    private void Wsagascript_OnClick(object? sender, RoutedEventArgs e)
+    private async void Wsagascript_OnClick(object? sender, RoutedEventArgs e)
     {
+        await MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
+            new MessageBoxStandardParams
+            {
+                ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.Ok,
+                ContentTitle = alert_message(0),
+                ContentHeader = alert_message(0),
+                ContentMessage = alert_message(13),
+                CanResize = false,
+                Topmost = true,
+                MaxHeight = 300,
+                MaxWidth = 700,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                Icon = MessageBoxAvaloniaEnums.Icon.Success,
+            }).ShowDialog(this);
+        
         opengapps_select();
         devmod_button_select();
         magisk_select();
         wsausername_amazon_select();
+        gapps_select_active();
+        gapps_select_method();
     }
 
     private void Onlywsa_OnClick(object? sender, RoutedEventArgs e)
@@ -1075,6 +1195,8 @@ public partial class MainWindow : Window
         devmod_button_select();
         magisk_select();
         wsausername_amazon_select();
+        gapps_select_active();
+
     }
     private void Wsa_username_func_OnClick(object? sender, RoutedEventArgs e)
     {
@@ -1089,6 +1211,8 @@ public partial class MainWindow : Window
 
     private async void Control_OnLoaded(object? sender, RoutedEventArgs e)
     {
+        gapps_select_active();
+        gapps_select_method();
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) == false)
         {
             WindowIcon.IsVisible = false;
@@ -1327,9 +1451,33 @@ public partial class MainWindow : Window
         }
     }
 
-    private async void Msstore_gapps_OnClick(object? sender, RoutedEventArgs e)
+    private async void Msstore_opengapps_OnClick(object? sender, RoutedEventArgs e)
     {
         string url = "https://opengapps.org";
+        var messageBoxStandardWindow = MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
+            new MessageBoxStandardParams
+            {
+                ButtonDefinitions = MessageBoxAvaloniaEnums.ButtonEnum.YesNo,
+                ContentTitle = alert_message(7),
+                ContentHeader = alert_message(7),
+                ContentMessage = alert_link(url),
+                CanResize = false,
+                Topmost = true,
+                SizeToContent = SizeToContent.WidthAndHeight,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                Icon = MessageBoxAvaloniaEnums.Icon.Warning,
+            });
+        var resux = await messageBoxStandardWindow.ShowDialog(this);
+
+        if (resux == ButtonResult.Yes)
+        {
+            OpenURL(url);
+        }
+    }
+    
+    private async void Msstore_mindthegapps_OnClick(object? sender, RoutedEventArgs e)
+    {
+        string url = "https://wiki.lineageos.org/gapps#downloads";
         var messageBoxStandardWindow = MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
             new MessageBoxStandardParams
             {
@@ -1488,8 +1636,8 @@ public partial class MainWindow : Window
         var resux = await messageBoxStandardWindow.ShowDialog(this);
         if (resux == ButtonResult.Ok)
         {
-            string execCommand = "Start-Process pwsh.exe -verb runas -ArgumentList '" + " -noexit " + "-c ";
-            execCommand += "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/EasierWsaInstaller/alpha/src/EasierWsaInstaller/guiSupport/requirements.ps1 -OutFile $env:TEMP/requirements.ps1 && cd $env:TEMP && ./requirements.ps1 && cd $env:TEMP && Remove-Item ./requirements.ps1;";
+            string execCommand = "Start-Process powershell.exe -ArgumentList '" + " -ExecutionPolicy Bypass -noexit " + "-c ";
+            execCommand += "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/EasierWsaInstaller/main/src/EasierWsaInstaller/guiSupport/requirements.ps1 -OutFile $env:TEMP/requirements.ps1 ; cd $env:TEMP ; ./requirements.ps1 ; cd $env:TEMP ; Remove-Item ./requirements.ps1;";
             execCommand += "'";
             var uri = "powershell.exe";
             var psi = new System.Diagnostics.ProcessStartInfo();
@@ -1499,6 +1647,15 @@ public partial class MainWindow : Window
             Process ps = System.Diagnostics.Process.Start(psi);
             ps.WaitForExit();
         }
+    }
+    private void Mindthegapps_select_OnClick(object? sender, RoutedEventArgs e)
+    {
+        gapps_select_method();
+    }
+
+    private void Ogapps_select_OnClick(object? sender, RoutedEventArgs e)
+    {
+        gapps_select_method();
     }
 }
 
