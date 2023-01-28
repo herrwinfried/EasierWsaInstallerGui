@@ -1,3 +1,5 @@
+﻿[_Türkçe Oku_](https://github.com/herrwinfried/EasierWsaInstallerGui/blob/alpha/README-TR.md)
+
 # Warning
 **This is an experimental project. We are not responsible for an incident that you will encounter. Do it within your own consciousness.**
 
@@ -24,6 +26,11 @@ EasierWsaInstallerGui is a project that has been converted to a EasierWsaInstall
 - [WSL](https://aka.ms/wslstorepage)
 - [Ubuntu](https://www.microsoft.com/store/productId/9PDXGNCFSCZV), [OpenSUSE Tumbleweed](https://www.microsoft.com/p/opensuse-tumbleweed/9mssk2zxxn11) or [Debian](https://www.microsoft.com/p/debian/9msvkqc78pk6)
 - [Powershell Core(7+)](https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d)
+
+## **Is it possible to do it with less hassle?**
+Yes, there is a Prepare button in the Requirements Pane. You can have it do most of it for you. However, after restarting your computer, you need to open Ubuntu and create a User account.
+
+*No problem if you want to handle it yourself. Lets continue.*
 
 ## Developer Mode must be turned on.
 > Settings > Privacy & security > For Developers > Developer Mode
@@ -54,14 +61,28 @@ Click on "EasierWsaInstallerGui 2.0.1 - Portable".
 
 Download the one that says "wsagui_beta_2.0.1-portable.zip".
 
-To run it, extract the zip, then press the WSAgui(.exe) file inside.
+To run it, extract the zip, then press the EasierWsaInstaller.Desktop(.exe) file inside.
 
 
 # FAQ
+
+## What do I do if WSA or Magisk is Updated?
+
+Since our MagiskOnWsaLocal and Wsagascript methods are modified from the originality of the file, you should do the same operations again. It will not receive updates from the store.
 
 ## What is root?
 
 You can think of root as an administrator account in Windows. It can also be called a superuser in some places. If you're asking this question for WSL, it's your password when creating the user account.
 
+## What about previous versions? Why Version numbers went backwards ?
+
+We decided to go with the [semantic version](https://semver.org/), so we took it from scratch. Our old versions will not be supported.
+
+## What are you using instead of WinForm?
+
+We are using [AvaloniUI](https://avaloniaui.net). However, although it supports Cross-Platform, it will only work compatible with windows due to the project.
+
 # Issues
 Don't forget to ask your questions on [Issues](https://github.com/herrwinfried/wsa-gui/issues), and the FAQ will be updated as you ask your questions.
+
+
