@@ -12,7 +12,7 @@ EasierWsaInstallerGui is a project that has been converted to a EasierWsaInstall
 
 # Video Showing Installation
 
-[![image](https://user-images.githubusercontent.com/52379312/193453617-98d3fdd9-d3a0-4d50-8ec2-36b77d6120ca.png)](https://youtu.be/GbHFhOz-JTk)
+[![image](https://user-images.githubusercontent.com/52379312/215293594-f8099bda-5a1a-4046-8668-96da842f9d20.png)](https://youtu.be/CqYldLypxYs)
 
 
 # What are the Requirements?
