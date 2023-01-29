@@ -8,6 +8,8 @@
         WindowStartupLocation="CenterScreen"
         Height="200"
         Width="600"
+        MaxHeight="200"
+        MaxWidth="600"
         CanResize="False" 
         ExtendClientAreaToDecorationsHint="True"
         ExtendClientAreaChromeHints="NoChrome"
