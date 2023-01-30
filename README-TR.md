@@ -13,7 +13,7 @@ EasierWsaInstallerGui, EasierWsaInstaller grafik arayüzüne dönüştürülmü�
 
 # Kurulumu Gösteren Video
 
-[![image](https://user-images.githubusercontent.com/52379312/193453617-98d3fdd9-d3a0-4d50-8ec2-36b77d6120ca.png)](https://youtu.be/GbHFhOz-JTk)
+[![image](https://user-images.githubusercontent.com/52379312/215544019-42c524f3-138d-42a7-a22f-dce480b8622c.png)](https://youtu.be/2FnBFpo-btE)
 
 
 # Gereksinimleri nelerdir?
