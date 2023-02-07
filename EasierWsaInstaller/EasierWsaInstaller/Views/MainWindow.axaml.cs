@@ -190,7 +190,9 @@ public partial class MainWindow : Window
                 pico.IsEnabled = false;
                 stock.IsEnabled = false;
                 micro.IsEnabled = false;
-                noneg.IsChecked = true;  
+                noneg.IsChecked = true;
+                wsa_username_func.IsEnabled = false;
+                wsa_username.IsEnabled = false;
             }
             else
             {
@@ -206,6 +208,8 @@ public partial class MainWindow : Window
                     noneg.IsChecked = false; 
                     pico.IsChecked = true;
                 }
+                wsa_username_func.IsEnabled = true;
+                wsa_username.IsEnabled = true;
             }
         }
         else
@@ -222,6 +226,8 @@ public partial class MainWindow : Window
                 noneg.IsChecked = false; 
                 pico.IsChecked = true;
             }
+            wsa_username_func.IsEnabled = true;
+            wsa_username.IsEnabled = true;
         }
     }
 

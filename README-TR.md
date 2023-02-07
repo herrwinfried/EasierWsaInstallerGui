@@ -1,4 +1,4 @@
-﻿[_Read English_](https://github.com/herrwinfried/EasierWsaInstallerGui/blob/alpha/README.md)
+[_Read English_](https://github.com/herrwinfried/EasierWsaInstallerGui/blob/alpha/README.md)
 
 
 # Uyarı
@@ -84,5 +84,4 @@ Root'u Windows'ta bir yönetici hesabı olarak düşünebilirsiniz. Bazı yerler
 
 # Sorunlar
 Sorularınızı [Sorunlar](https://github.com/herrwinfried/wsa-gui/issues) (ingilizce yazınız) üzerinden sormayı unutmayın; SSS, siz sorularınızı sordukça güncellenecektir.
-
 
