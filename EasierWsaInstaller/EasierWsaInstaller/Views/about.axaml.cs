@@ -44,7 +44,7 @@ public partial class about : Window
     }
     private void Control_OnLoaded(object? sender, RoutedEventArgs e)
     {
-        version.Text = "v1.0.1";
+        version.Text = "v1.0.3";
          if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) == false)
           {
               Menu1.IsVisible = false;
