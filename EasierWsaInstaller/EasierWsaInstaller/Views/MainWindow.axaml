@@ -169,7 +169,20 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
                         </MenuItem>
                         
                         </MenuItem>
-                    
+                    <MenuItem Name="branch_select" Header="Branch">
+                        <MenuItem Name="main_select" Header="main" Click="Main_select_OnClick">
+                            <MenuItem.Icon>
+                                <CheckBox Name="main_select_c" IsChecked="True" IsHitTestVisible="False" BorderThickness="0" >
+                                </CheckBox>
+                            </MenuItem.Icon> 
+                        </MenuItem>
+                        <MenuItem Name="alpha_select" Header="alpha" Click="Alpha_select_OnClick">
+                            <MenuItem.Icon>
+                                <CheckBox Name="alpha_select_c" IsChecked="false" IsHitTestVisible="False" BorderThickness="0" >
+                                </CheckBox>
+                            </MenuItem.Icon> 
+                        </MenuItem>
+                    </MenuItem>
                 </MenuItem>
             </Menu>
         </DockPanel>
@@ -261,9 +274,9 @@ Title="[BETA] EasierWsaInstallerGUI Installer"
             <TextBlock Text=" " />
             <CheckBox Name="autosetup_check" IsChecked="True" IsEnabled="true">Install after download</CheckBox>
             <TextBlock Text=" " />
-            <CheckBox Name="adb_check" IsChecked="False">Download and install Android platform tools + adds path (adb command)</CheckBox>
+            <CheckBox Name="adb_check" IsChecked="True">Download and install Android platform tools + adds path</CheckBox>
             <TextBlock Text=" " />
-            <CheckBox Name="wsatools_check" IsChecked="True">Download and install WSATools(apk alternative)</CheckBox>
+            <CheckBox Name="wsatools_check" IsChecked="True">Download and install WSATools</CheckBox>
             <TextBlock Text=" " />
         </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="4" Name="x">

@@ -63,8 +63,8 @@ public partial class MainWindow : Window
         
         Optionals_title.Text = "İsteğe Bağlı";
         autosetup_check.Content = "İndirdikte Sonra Kur";
-        adb_check.Content = "Android platform araçlarını indirin ve kurun + PATH ekle (adb komutu)";
-        wsatools_check.Content = "WSATools'u indirin ve kurun(apk alternatifi)";
+        adb_check.Content = "Android platform araçlarını indirin ve kurun + PATH ekle";
+        wsatools_check.Content = "WSATools'u indirin ve kurun";
 
         Customers_title.Text = "Özelleştirme";
 
@@ -136,8 +136,8 @@ public partial class MainWindow : Window
 
         Optionals_title.Text = "Optional";
         autosetup_check.Content = "Install after download";
-        adb_check.Content = "Download and install Android platform tools + adds path (adb command)";
-        wsatools_check.Content = "Download and install WSATools(apk alternative)";
+        adb_check.Content = "Download and install Android platform tools + adds path";
+        wsatools_check.Content = "Download and install WSATools";
 
         Customers_title.Text = "Customers";
 
@@ -158,6 +158,21 @@ public partial class MainWindow : Window
 
     }
 
+    private string get_branch()
+    {
+        if (alpha_select_c.IsChecked.ToString() == "True")
+        {
+            return "alpha";
+        } else
+        if (main_select_c.IsChecked.ToString() == "True")
+        {
+            return "main";
+        }
+        else
+        {
+            return "main";
+        }
+    }
     private void gapps_select_active()
     {
         if (magiskonwsalocal.IsChecked.ToString() == "True")
@@ -862,7 +877,7 @@ public partial class MainWindow : Window
             TextShellNoExit = "";
         }
         string execCommand = "Start-Process pwsh.exe -verb runas -ArgumentList '" + TextShellNoExit + "-c ";
-        execCommand += "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/EasierWsaInstaller/main/src/EasierWsaInstaller/guiSupport/setup.ps1 -OutFile $env:TEMP/setup.ps1 && cd $env:TEMP && ./setup.ps1 " + resultAll().ToString() + " && cd $env:TEMP && Remove-Item ./setup.ps1;";
+        execCommand += "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/EasierWsaInstaller/" + get_branch().ToString() + "/src/EasierWsaInstaller/guiSupport/setup.ps1 -OutFile $env:TEMP/setup.ps1 && cd $env:TEMP && ./setup.ps1 " + resultAll().ToString() + " && cd $env:TEMP && Remove-Item ./setup.ps1;";
         execCommand += "'";
         
         if (devmode_mod.IsChecked.ToString() == "True")
@@ -1643,7 +1658,7 @@ public partial class MainWindow : Window
         if (resux == ButtonResult.Ok)
         {
             string execCommand = "Start-Process powershell.exe -ArgumentList '" + " -ExecutionPolicy Bypass -noexit " + "-c ";
-            execCommand += "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/EasierWsaInstaller/main/src/EasierWsaInstaller/guiSupport/requirements.ps1 -OutFile $env:TEMP/requirements.ps1 ; cd $env:TEMP ; ./requirements.ps1 ; cd $env:TEMP ; Remove-Item ./requirements.ps1;";
+            execCommand += "Invoke-WebRequest https://raw.githubusercontent.com/herrwinfried/EasierWsaInstaller/" + get_branch().ToString() + "/src/EasierWsaInstaller/guiSupport/requirements.ps1 -OutFile $env:TEMP/requirements.ps1 ; cd $env:TEMP ; ./requirements.ps1 ; cd $env:TEMP ; Remove-Item ./requirements.ps1;";
             execCommand += "'";
             var uri = "powershell.exe";
             var psi = new System.Diagnostics.ProcessStartInfo();
@@ -1662,6 +1677,34 @@ public partial class MainWindow : Window
     private void Ogapps_select_OnClick(object? sender, RoutedEventArgs e)
     {
         gapps_select_method();
+    }
+
+    private void Main_select_OnClick(object? sender, RoutedEventArgs e)
+    {
+        if (alpha_select_c.IsChecked.ToString() == "True")
+        {
+            main_select_c.IsChecked = true;
+            alpha_select_c.IsChecked = false;
+        }
+        else
+        {
+            main_select_c.IsChecked = false;
+            alpha_select_c.IsChecked = true;
+        }
+    }
+
+    private void Alpha_select_OnClick(object? sender, RoutedEventArgs e)
+    {
+        if (main_select_c.IsChecked.ToString() == "True")
+        {
+            main_select_c.IsChecked = false;
+            alpha_select_c.IsChecked = true;
+        }
+        else
+        {
+            main_select_c.IsChecked = true;
+            alpha_select_c.IsChecked = false;
+        }
     }
 }
 

@@ -2,13 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasierWsaInstaller", "EasierWsaInstaller\EasierWsaInstaller\EasierWsaInstaller.csproj", "{B97F6395-5536-4A3C-8D4D-6589BF8035BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasierWsaInstaller.Android", "EasierWsaInstaller\EasierWsaInstaller.Android\EasierWsaInstaller.Android.csproj", "{6430BAFA-AACF-4573-843D-22F237950F48}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasierWsaInstaller.Desktop", "EasierWsaInstaller\EasierWsaInstaller.Desktop\EasierWsaInstaller.Desktop.csproj", "{A44F3815-3AF1-4391-8A39-7E8DB82B70AF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasierWsaInstaller.iOS", "EasierWsaInstaller\EasierWsaInstaller.iOS\EasierWsaInstaller.iOS.csproj", "{609E86DD-069C-4B44-9526-1D92F3F341BB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasierWsaInstaller.Web", "EasierWsaInstaller\EasierWsaInstaller.Web\EasierWsaInstaller.Web.csproj", "{25096947-C8AD-46B7-A118-18F861DEFFFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,25 +14,9 @@ Global
 		{B97F6395-5536-4A3C-8D4D-6589BF8035BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B97F6395-5536-4A3C-8D4D-6589BF8035BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B97F6395-5536-4A3C-8D4D-6589BF8035BE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6430BAFA-AACF-4573-843D-22F237950F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6430BAFA-AACF-4573-843D-22F237950F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6430BAFA-AACF-4573-843D-22F237950F48}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{6430BAFA-AACF-4573-843D-22F237950F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6430BAFA-AACF-4573-843D-22F237950F48}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6430BAFA-AACF-4573-843D-22F237950F48}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{A44F3815-3AF1-4391-8A39-7E8DB82B70AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A44F3815-3AF1-4391-8A39-7E8DB82B70AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A44F3815-3AF1-4391-8A39-7E8DB82B70AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A44F3815-3AF1-4391-8A39-7E8DB82B70AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{609E86DD-069C-4B44-9526-1D92F3F341BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{609E86DD-069C-4B44-9526-1D92F3F341BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{609E86DD-069C-4B44-9526-1D92F3F341BB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{609E86DD-069C-4B44-9526-1D92F3F341BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{609E86DD-069C-4B44-9526-1D92F3F341BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{609E86DD-069C-4B44-9526-1D92F3F341BB}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{25096947-C8AD-46B7-A118-18F861DEFFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25096947-C8AD-46B7-A118-18F861DEFFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25096947-C8AD-46B7-A118-18F861DEFFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25096947-C8AD-46B7-A118-18F861DEFFFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
