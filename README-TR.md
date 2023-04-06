@@ -1,5 +1,7 @@
 [_Read English_](https://github.com/herrwinfried/EasierWsaInstallerGui/blob/alpha/README.md)
 
+# ⚠️ Merhaba! ⚠️
+## 🔒 Artık bu projenin bir değeri olduğunu düşünmüyorum ve Bluestacks vs. Yazılımları kullanmak mantıklı. Süresiz olarak arşivlendi. Yüklemeye kararlıysanız, [MagiskOnWsaLocal](https://github.com/LSPosed/MagiskOnWSALocal) projesine göz atın. 🫡
 
 # Uyarı
 **Bu deneysel bir projedir. Karşılaşacağınız bir olaydan biz sorumlu değiliz. Bunu kendi bilincinizin içinde yapın.**

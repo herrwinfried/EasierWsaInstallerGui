@@ -1,5 +1,8 @@
 ﻿[_Türkçe Oku_](https://github.com/herrwinfried/EasierWsaInstallerGui/blob/alpha/README-TR.md)
 
+# ⚠️ Hi! ⚠️
+## 🔒 I don't think this project has any value anymore and Bluestacks vs. It makes sense to use software. Archived indefinitely. If you are determined to install, check out the [MagiskOnWsaLocal](https://github.com/LSPosed/MagiskOnWSALocal) project. 🫡
+
 # Warning
 **This is an experimental project. We are not responsible for an incident that you will encounter. Do it within your own consciousness.**
 
